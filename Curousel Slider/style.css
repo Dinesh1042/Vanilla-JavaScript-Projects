@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .container .curouselCont {
+  height: 45vh;
+  width: 100%;
+  background-color: #f4f4f4;
+  position: relative;
+  margin: 0 auto;
+}
+
+body .container .curouselCont .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body .container .curouselCont .slider .slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  text-align: center;
+  margin-right: -100%;
+  display: none;
+  -webkit-transition: 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) -webkit-transform;
+  transition: 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) -webkit-transform;
+  transition: 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) transform;
+  transition: 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) transform, 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) -webkit-transform;
+  width: 100%;
+}
+
+body .container .curouselCont .slider .slide h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body .container .curouselCont .slider .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .container .curouselCont .slider .slide.active {
+  z-index: 5;
+  display: block;
+}
+
+body .container .curouselCont .slider .slide.prev-slide {
+  display: block;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+body .container .curouselCont .slider .slide.next-slide {
+  display: block;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+body .container .curouselCont .slider .slide1 {
+  background-color: #cccccc;
+}
+
+body .container .curouselCont .slider .slide2 {
+  background-color: #aaaaaa;
+}
+
+body .container .curouselCont .slider .slide3 {
+  background-color: #cacaca;
+}
+
+body .container .curouselCont .slider .slide4 {
+  background-color: #ccc;
+}
+
+body .container .curouselCont .slider .slide5 {
+  background-color: #aaaaaa;
+}
+
+body .container .curouselCont .navigation {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.2rem;
+  z-index: 10;
+}
+
+body .container .curouselCont .navigation button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #464646;
+  font-size: 2rem;
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 0.8;
+  -webkit-transition-property: background-color, opacity;
+  transition-property: background-color, opacity;
+}
+
+body .container .curouselCont .navigation button:hover {
+  background-color: #7070701c;
+  opacity: 1;
+}
+
+body .container .curouselCont .indicators {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+}
+
+body .container .curouselCont .indicators .dot {
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border-radius: 4px;
+  margin: 0 4px;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+  opacity: 0.4;
+  -webkit-transition-property: width, background-color, opacity;
+  transition-property: width, background-color, opacity;
+  cursor: pointer;
+}
+
+body .container .curouselCont .indicators .dot.active {
+  width: 20px;
+  opacity: 1;
+  background-color: #369;
+}
+/*# sourceMappingURL=style.css.map */

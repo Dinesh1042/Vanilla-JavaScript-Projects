@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body .container .curouselCont {
+  height: 45vh;
+  width: 100%;
+  background-color: #f4f4f4;
+  position: relative;
+  margin: 0 auto;
+  .slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .slide {
+      position: relative;
+      min-width: 100%;
+      height: 100%;
+      font-family: sans-serif;
+      text-align: center;
+      margin-right: -100%;
+      display: none;
+      transition: 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) transform;
+      width: 100%;
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .slide.active {
+      z-index: 5;
+      display: block;
+    }
+    .slide.prev-slide {
+      display: block;
+      transform: translateX(-100%);
+    }
+    .slide.next-slide {
+      display: block;
+      transform: translateX(100%);
+    }
+    .slide1 {
+      background-color: #cccccc;
+    }
+    .slide2 {
+      background-color: #aaaaaa;
+    }
+    .slide3 {
+      background-color: rgb(202, 202, 202);
+    }
+    .slide4 {
+      background-color: #ccc;
+    }
+    .slide5 {
+      background-color: #aaaaaa;
+    }
+  }
+  // navigation
+  .navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+    z-index: 10;
+    button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: rgb(70, 70, 70);
+      font-size: 2rem;
+      cursor: pointer;
+      height: 45px;
+      width: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: 0.3s ease;
+      opacity: 0.8;
+      transition-property: background-color, opacity;
+    }
+    button:hover {
+      background-color: #7070701c;
+      opacity: 1;
+    }
+  }
+  // indicators
+  .indicators {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 10;
+    .dot {
+      height: 8px;
+      width: 8px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 4px;
+      margin: 0 4px;
+      transition: 0.8s ease;
+      opacity: 0.4;
+      transition-property: width, background-color, opacity;
+      cursor: pointer;
+    }
+    .dot.active {
+      width: 20px;
+      opacity: 1;
+      background-color: #369;
+    }
+  }
+}
