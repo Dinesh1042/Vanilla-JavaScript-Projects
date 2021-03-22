@@ -1,0 +1,286 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.leftCont {
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.leftMainCont {
+  width: 100%;
+}
+
+.container .legendContainer {
+  background-color: #f1f1f1;
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+}
+
+.container .legendContainer ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  user-select: none;
+}
+.container .legendContainer ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .legendContainer ul li small {
+  color: #bdbdbd;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.container .leftMainCont .seat {
+  height: 25px;
+  width: 30px;
+  border: 1px solid #bdbdbd;
+  border-radius: 2px 2px 4px 4px;
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+  transition: 0.3s ease background-color;
+}
+.container .leftMainCont .seat::after {
+  content: "";
+  height: 23px;
+  width: 20px;
+  border: 1px solid #bdbdbd;
+  position: absolute;
+  left: 50%;
+  top: 29%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 2px 2px;
+  transition: 0.3s ease background-color;
+}
+
+.container .leftMainCont .seat:hover,
+.container .leftMainCont .seat:hover::after {
+  background-color: #e6e6e6;
+}
+
+.container .legendContainer .seat {
+  cursor: default;
+}
+.container .legendContainer .seat:hover,
+.container .legendContainer .seat:hover::after {
+  background-color: #fff;
+}
+.container .leftMainCont .seat.occupied,
+.container .leftMainCont .seat.occupied::after {
+  background-color: lightgray;
+}
+.container .leftMainCont .seat.selected,
+.container .leftMainCont .seat.selected::after {
+  background-color: rgb(168, 245, 168);
+  border-color: rgba(0, 190, 0, 0.336);
+}
+
+.container .mainSeatCont {
+  background-color: aliceblue;
+  height: 100%;
+  padding: 3rem 2rem;
+  position: relative;
+  min-width: 100%;
+  overflow-x: auto;
+  margin: 0% auto;
+}
+
+.container .mainSeatCont .seatCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .mainSeatCont .seatCont .seatRowCont {
+  display: flex;
+}
+.container .mainSeatCont .seatCont .seatRowCont2 {
+  margin: 0 1.5rem;
+}
+.container .leftMainCont .screen {
+  height: 15px;
+  width: 65%;
+  background-color: #686868;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 8px 8px;
+  max-width: 460px;
+  user-select: none;
+}
+.container .leftMainCont .screen small {
+  color: #bdbdbd;
+  font-size: 11px;
+  letter-spacing: 0.3rem;
+}
+/*  */
+.container .confirmCont {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.container .confirmCont .rightTopCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #c4c4c4;
+}
+.container .confirmCont .movieInfo div {
+  margin-bottom: 0.8rem;
+}
+.container .confirmCont .movieInfo p {
+  color: #bdbdbd;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  margin-bottom: 0.2rem;
+}
+.container .confirmCont .movieInfo .dateOn {
+  color: #414141;
+  font-size: 14px;
+  margin-top: 0.4rem;
+}
+.container .confirmCont .selectMovie select {
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #c4c4c4;
+  outline: none;
+  border-radius: 3px;
+  color: #686868;
+  font-family: inherit;
+  margin-top: 0.4rem;
+  background-color: transparent;
+}
+.container .confirmCont .movieInfo h1 {
+  color: #414141;
+  margin-top: 0.2rem;
+}
+
+.container .confirmCont .rightBottomCont .selectedSeatCont {
+  border-bottom: 1px solid #c4c4c4;
+  padding: 1rem 0;
+}
+.container .confirmCont .rightBottomCont .selectedSeatCont p {
+  font-size: 12px;
+  color: #bdbdbd;
+}
+.container .rightBottomCont .noSelected {
+  text-align: center;
+  color: crimson;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #bdbdbd;
+  text-transform: uppercase;
+  width: 200px;
+}
+.container .confirmCont .rightBottomCont .selectedSeatCont .selectedSeat {
+  border: 1px solid lightgreen;
+  color: lightgreen;
+  padding: 0.375rem 1.8rem;
+  border-radius: 3px;
+  user-select: none;
+  min-width: 77.3px;
+  max-width: 77.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+.container
+  .confirmCont
+  .rightBottomCont
+  .selectedSeatCont
+  .selectedSeatsHolder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(67.3px, 67px));
+  grid-column-gap: 1rem;
+  grid-row-gap: 0.5rem;
+  margin-top: 0.8rem;
+  grid-auto-columns: auto;
+  position: relative;
+}
+.container .confirmCont .rightBottomCont .numberOfSeatsCont {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  user-select: none;
+}
+.container .confirmCont .rightBottomCont .numberOfSeatsCont .numberOfSeat p {
+  color: #414141;
+  font-size: 13px;
+}
+.container .confirmCont .rightBottomCont .numberOfSeatsCont .priceCont {
+  color: crimson;
+}
+.container .confirmCont .rightBottomCont .buttonCont {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.container .confirmCont .rightBottomCont .buttonCont button {
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 4px;
+}
+.container .confirmCont .rightBottomCont .buttonCont .cancelBtn button {
+  background-color: crimson;
+}
+.container .confirmCont .rightBottomCont .buttonCont .proceedBtn button {
+  background-color: lightgreen;
+}
+
+/* Desktop */
+
+@media (min-width: 800px) {
+  .container {
+    display: flex;
+  }
+  .container .confirmCont {
+    min-width: 300px;
+    max-width: 300px;
+    float: right;
+    padding: 2rem;
+    min-height: 100vh;
+  }
+  .container .legendContainer {
+    justify-content: start;
+    align-items: flex-start;
+  }
+  .container .legendContainer ul {
+    margin: unset;
+  }
+  .container .confirmCont .rightBottomCont .buttonCont {
+    flex-direction: column-reverse;
+  }
+  .container .confirmCont .rightBottomCont .buttonCont button {
+    width: 100%;
+    padding: 0.8rem 0.75rem;
+    margin-bottom: 0.8rem;
+  }
+}
