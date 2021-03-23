@@ -23,11 +23,13 @@ moviesList.forEach((movie) => {
 });
 
 let moviePrice = 7;
+let currentMovieName = `Tom and Jerry 2021`;
 
 selectMovieEl.addEventListener("input", (e) => {
   let movieName = e.target.value.split("");
   let dollarIndex = movieName.indexOf("$");
   let movie = movieName.splice(0, dollarIndex - 1).join("");
+  currentMovieName = movie;
   moviePrice = JSON.parse(movieName.splice(2, dollarIndex).join(""));
 
   updatMovieName(movie, moviePrice);
@@ -105,7 +107,6 @@ function updatMovieName(movieName, price) {
 function updatePrice(price, seats) {
   const totalPriceEl = document.getElementById("totalPrice");
   let total = seats * price;
-  console.log(total);
   totalPriceEl.innerHTML = `$ ${total}`;
 }
 
@@ -122,7 +123,7 @@ function cancelSeats() {
   updateSeats();
 }
 
-function successModal(movieName, totalPrice, successTrue) {
+function successModal(movieNameIn, totalPrice, successTrue) {
   const bodyEl = document.querySelector("body");
 
   const sectionEl = document.getElementById("section");
@@ -152,7 +153,7 @@ function successModal(movieName, totalPrice, successTrue) {
   modalCenter.appendChild(modalHeading);
   const modalPara = document.createElement("p");
   modalCenter.appendChild(modalPara);
-  modalPara.innerHTML = `You have booked your ticket Successfully on tom and jerry movie`;
+  modalPara.innerHTML = `${movieNameIn} movie ticket have been booked successfully.`;
   successModal.appendChild(modalCenter);
 
   // modal Bottom
@@ -189,7 +190,7 @@ proceedBtnEl.addEventListener("click", (e) => {
   if (takenSeats.length) {
     const bodyEl = document.querySelector("body");
     bodyEl.classList.add("modal-active");
-    successModal();
+    successModal(currentMovieName, moviePrice * takenSeats.length);
   } else {
     alert("Oops no seat Selected");
   }
