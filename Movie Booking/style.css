@@ -407,6 +407,9 @@ body.modal-active .overlay {
   .successModal .modalCenter p {
     margin-top: 0.3rem;
   }
+  body.modal-active {
+    padding-right: 0px;
+  }
 }
 
 @keyframes modalAnimation {
