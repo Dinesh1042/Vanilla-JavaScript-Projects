@@ -12,7 +12,9 @@
 .leftMainCont {
   width: 100%;
 }
-
+body {
+  background-color: #f1f1f1;
+}
 .container .legendContainer {
   background-color: #f1f1f1;
   display: flex;
@@ -41,13 +43,14 @@
   letter-spacing: 1px;
   margin-bottom: 4px;
 }
+
 .container .leftMainCont .seat {
   height: 25px;
   width: 30px;
   border: 1px solid #bdbdbd;
   border-radius: 2px 2px 4px 4px;
   margin: 10px;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
   position: relative;
   cursor: pointer;
   background-color: #fff;
@@ -93,7 +96,7 @@
 .container .mainSeatCont {
   background-color: aliceblue;
   height: 100%;
-  padding: 3rem 2rem;
+  padding: 3rem 1rem;
   position: relative;
   min-width: 100%;
   overflow-x: auto;
@@ -125,6 +128,7 @@
   border-radius: 0 0 8px 8px;
   max-width: 460px;
   user-select: none;
+  margin: 0 auto;
 }
 .container .leftMainCont .screen small {
   color: #bdbdbd;
@@ -256,16 +260,99 @@
 }
 .container .confirmCont .rightBottomCont .buttonCont .cancelBtn button {
   background-color: crimson;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .container .confirmCont .rightBottomCont .buttonCont .cancelBtn button:hover {
   background-color: rgb(204, 0, 41);
   transition: 0.3s ease background-color;
 }
-.container .confirmCont .rightBottomCont .buttonCont .proceedBtn button {
+.container .confirmCont .rightBottomCont .buttonCont .proceedBtnEl button {
   background-color: lightgreen;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: 0.3s ease background-color;
 }
-.container .confirmCont .rightBottomCont .buttonCont .proceedBtn button:hover {
+.container
+  .confirmCont
+  .rightBottomCont
+  .buttonCont
+  .proceedBtnEl
+  button:hover {
+  background-color: rgba(84, 216, 84, 0.808);
+}
+
+/* Success Modal */
+body.modal-active {
+  overflow: hidden;
+  padding-right: 17px;
+}
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  top: 0%;
+  left: 0%;
+  opacity: 0.3;
+  display: none;
+}
+body.modal-active .overlay {
+  display: block;
+}
+
+.successModal {
+  width: 80%;
+  max-width: 450px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.4rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-image: url(./asset/c1.png);
+  background-size: 140%;
+  background-position: top center;
+  user-select: none;
+  z-index: 11;
+  animation: 1s ease modalAnimation;
+}
+.successModal .modalTop {
+  padding: 1rem;
+}
+.successModal .modalTop img {
+  width: 100px;
+}
+.successModal .modalCenter {
+  padding: 0.5rem 2.5rem;
+}
+.successModal .modalCenter h1 {
+  color: #414141;
+}
+.successModal .modalCenter p {
+  color: #686868;
+  margin-top: 0.5rem;
+}
+.successModal .modalBottom {
+  margin-top: 1rem;
+}
+.successModal .modalBottom button {
+  background-color: lightgreen;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1.3rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: 0.3s ease background-color;
+}
+.successModal .modalBottom button:hover {
   background-color: rgba(84, 216, 84, 0.808);
 }
 /* Desktop */
@@ -298,11 +385,35 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
+  .container .mainSeatCont {
+    padding-left: 0;
+  }
   .container .mainSeatCont .seatCont {
     display: flex;
+    min-width: 500px;
+    align-items: center;
+  }
+  .container .mainSeatCont .screen {
+    min-width: 400px;
+    transform: translateX(-30%);
+  }
+  .successModal .modalCenter {
+    padding: 0.4rem;
+  }
+  .successModal .modalCenter h1 {
+    font-size: 17px;
+  }
+  .successModal .modalCenter p {
+    margin-top: 0.3rem;
+  }
+}
 
-    align-items: unset !important;
-    justify-content: unset !important;
+@keyframes modalAnimation {
+  0% {
+    margin-top: -5px;
+  }
+  100% {
+    margin-top: 0px;
   }
 }

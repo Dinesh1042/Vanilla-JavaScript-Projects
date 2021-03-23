@@ -12,6 +12,10 @@ const selectedSeatsHolderEl = document.getElementById("selectedSeatsHolder");
 
 const moviePriceEl = document.getElementById("moviePrice");
 
+const cancelBtnEL = document.getElementById("cancelBtn");
+
+const proceedBtnEl = document.getElementById("proceedBtn");
+
 moviesList.forEach((movie) => {
   const optionEl = document.createElement("option");
   optionEl.innerHTML = `${movie.movieName} $${movie.price}`;
@@ -75,6 +79,14 @@ function updateSeats() {
 
     seatHolder.innerHTML = seat;
   });
+
+  if (!takenSeats.length) {
+    const spanEl = document.createElement("span");
+    spanEl.classList.add("noSelected");
+    spanEl.innerHTML = `NO SEAT SELECTED`;
+    selectedSeatsHolderEl.appendChild(spanEl);
+  }
+
   seatCount();
 }
 
@@ -96,3 +108,89 @@ function updatePrice(price, seats) {
   console.log(total);
   totalPriceEl.innerHTML = `$ ${total}`;
 }
+
+cancelBtn.addEventListener("click", (e) => {
+  cancelSeats();
+});
+
+function cancelSeats() {
+  takenSeats = [];
+  seatContEl.forEach((seat) => {
+    seat.classList.remove("selected");
+  });
+  updatePrice(0, 0);
+  updateSeats();
+}
+
+function successModal(movieName, totalPrice, successTrue) {
+  const bodyEl = document.querySelector("body");
+
+  const sectionEl = document.getElementById("section");
+
+  const overlay = document.createElement("div");
+
+  overlay.classList.add("overlay");
+
+  sectionEl.appendChild(overlay);
+
+  const successModal = document.createElement("div");
+  successModal.classList.add("successModal");
+  const modalTop = document.createElement("div");
+  modalTop.classList.add("modalTop");
+  const popImg = document.createElement("img");
+  popImg.src = "./asset/pop.png";
+  modalTop.appendChild(popImg);
+
+  successModal.appendChild(modalTop);
+
+  // Modal Center
+
+  const modalCenter = document.createElement("div");
+  const modalHeading = document.createElement("h1");
+  modalCenter.classList.add("modalCenter");
+  modalHeading.innerHTML = `Ticked Booked Successfully`;
+  modalCenter.appendChild(modalHeading);
+  const modalPara = document.createElement("p");
+  modalCenter.appendChild(modalPara);
+  modalPara.innerHTML = `You have booked your ticket Successfully on tom and jerry movie`;
+  successModal.appendChild(modalCenter);
+
+  // modal Bottom
+
+  const modalBottom = document.createElement("div");
+  modalBottom.classList.add("modalBottom");
+  const successBtn = document.createElement("button");
+
+  successBtn.innerHTML = `Ok Got It!`;
+  modalBottom.appendChild(successBtn);
+  successModal.appendChild(modalBottom);
+
+  successBtn.addEventListener("click", (e) => {
+    removeModal();
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target.classList.contains("overlay")) {
+      removeModal();
+    }
+  });
+
+  function removeModal() {
+    overlay.remove();
+    successModal.remove();
+    bodyEl.classList.remove("modal-active");
+    cancelSeats();
+  }
+
+  sectionEl.appendChild(successModal);
+}
+
+proceedBtnEl.addEventListener("click", (e) => {
+  if (takenSeats.length) {
+    const bodyEl = document.querySelector("body");
+    bodyEl.classList.add("modal-active");
+    successModal();
+  } else {
+    alert("Oops no seat Selected");
+  }
+});
