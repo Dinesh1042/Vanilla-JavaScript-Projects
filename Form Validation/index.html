@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <header>
+          <h1>Create Account</h1>
+        </header>
+        <form id="form">
+          <div class="form-control userNameCont">
+            <label for="userName">Username</label>
+            <input type="text" id="username" placeholder="User Name" />
+            <small>Enter user Name</small>
+          </div>
+
+          <!-- Email Cont -->
+
+          <div class="form-control EmailCont">
+            <label for="Email">Email</label>
+            <input type="text" id="email" placeholder="Email" />
+            <small>Enter Email</small>
+          </div>
+
+          <!-- Password -->
+
+          <div class="form-control passwordCont">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" />
+            <small>Enter your password</small>
+          </div>
+
+          <!-- Confirm Password -->
+
+          <div class="form-control ConfirmpasswordCont">
+            <label for="Confirmpassword">Confirm Password</label>
+            <input
+              type="text"
+              id="Confirmpassword"
+              placeholder="Confirm your password"
+              autocomplete="off"
+            />
+            <small>Confirm your password</small>
+          </div>
+
+          <!-- Submit  Btn-->
+
+          <div class="submitBtn">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
