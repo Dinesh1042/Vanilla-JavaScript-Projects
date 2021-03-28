@@ -1,0 +1,104 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+  padding: 0%;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+.container {
+  display: flex;
+  padding: 1rem;
+  max-width: 700px;
+  margin: 0% auto;
+  margin-top: 4rem;
+}
+
+.container .leftCont {
+  display: flex;
+  flex-direction: column;
+
+  border-right: 1px solid #c4c4c4;
+  padding-right: 1rem;
+}
+.container .leftCont button {
+  border: none;
+  outline: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #7952b3;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #fff;
+  cursor: pointer;
+  margin: 0.5rem;
+  text-transform: capitalize;
+}
+
+.container main {
+  padding: 1rem;
+  flex: 1;
+}
+.container main h2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #c4c4c4;
+  font-weight: 300;
+}
+
+main .userEl .UserCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  background-color: #f4f4f4;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  padding-right: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+main .userEl .UserCont .userLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .userEl .UserCont .userLeft p {
+  font-weight: 600;
+  margin-left: 1rem;
+}
+main .userEl .UserCont .userLeft img {
+  width: 50px;
+  border-radius: 50%;
+}
+.container .wealthEl {
+  display: flex;
+  margin-top: 1rem;
+}
+.container .wealthEl h2 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0;
+  font-size: 1rem;
+  padding: 1rem;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .leftCont {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .leftCont button {
+    margin: 5px !important;
+  }
+}
