@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Overpass", sans-serif;
+}
+.container {
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: transform, margin-left, margin-right;
+}
+.container .heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 5.5rem;
+}
+.container .topNav {
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  background-color: #7952b3;
+
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: padding-left;
+}
+.container .topNav nav {
+  max-width: 1100px;
+  margin: 0% auto;
+}
+.container .heroSection .textCont {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid #c4c4c4;
+  padding: 2rem 1rem;
+  width: 90%;
+  max-width: 800px;
+}
+.container .heroSection .textCont h1 {
+  font-size: 2.52rem;
+}
+.container .heroSection .textCont p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  color: #747474;
+}
+.container .heroSection button {
+  border: none;
+  outline: none;
+  padding: 0.575rem 1.4rem;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #7952b3;
+  color: #fff;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+.overlay {
+  display: none;
+}
+.container .sideNav {
+  position: fixed;
+  background-color: #f2f2f2;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  min-height: 100vh;
+  transform: translateX(-280px);
+  width: 280px;
+  z-index: 100;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: transform;
+  left: 0%;
+  top: 0%;
+  /* opacity: 0; */
+}
+
+.container .sideNav .navHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  background-size: 120%;
+  background-position: left center;
+  color: #fff;
+  background-color: #7952b3;
+}
+.container .sideNav .navHead p {
+  margin-left: 0.8rem;
+  margin-top: 0.5rem;
+}
+.container .sideNav .navHead .profile {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .sideNav .navHead .profile img {
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+}
+
+.container .sideNav nav .navBody ul li {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  justify-content: flex-start;
+  padding-left: 0.8rem;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+.container .sideNav nav .navBody ul li .icon {
+  padding: 0 1rem;
+}
+.container .sideNav nav .navBody ul li .icon ion-icon {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.514);
+  margin-top: 4px;
+}
+.container .sideNav nav .navBody ul li.active::after {
+  content: "";
+  height: 100%;
+  width: 4px;
+  position: absolute;
+  left: 0;
+  top: 0%;
+  background-color: #7952b3;
+  border-radius: 0 5px 5px 0;
+}
+.container .sideNav nav .navBody ul li:hover {
+  background-color: #7952b313;
+}
+.container .sideNav nav .navBody ul li.active {
+  background-color: #7952b341;
+}
+.container .sideNav nav .navBody ul li.active p,
+.container .sideNav nav .navBody ul li.active .icon ion-icon {
+  color: #7952b3;
+}
+
+.container .topNav nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.container .topNav nav .topLeft {
+  display: flex;
+  align-items: center;
+}
+.container .topNav nav .topLeft p {
+  margin-left: 1rem;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.container .topNav nav .topLeft .hamburgar {
+  height: 35px;
+  width: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .topNav nav .topLeft .hamburgar .line {
+  height: 2px;
+  width: 80%;
+  background-color: #fff;
+  position: relative;
+}
+.container .topNav nav .topLeft .hamburgar .line::after,
+.container .topNav nav .topLeft .hamburgar .line::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+}
+.container .topNav nav .topLeft .hamburgar .line::after {
+  top: -8px;
+}
+.container .topNav nav .topLeft .hamburgar .line::before {
+  bottom: -8px;
+}
+.container .topNav nav .ctaBtn button {
+  border: none;
+  outline: none;
+  padding: 0.575rem 1.4rem;
+  border-radius: 99px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #7952b3;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+}
+body main {
+  margin-top: 0.5rem;
+}
+body main .textContainer {
+  max-width: 800px;
+  margin: 0% auto;
+  padding: 2rem;
+  width: 95%;
+}
+body main .textContainer p {
+  padding: 0.6rem 0;
+  line-height: 1.5;
+  color: #747474;
+}
+body main .textContainer h2 {
+  margin-top: 0.6rem;
+}
+body.nav-open .container .sideNav {
+  transform: translate(0);
+  opacity: 1;
+}
+body.nav-open .container {
+  margin-left: 280px;
+}
+body.nav-open .container .topNav {
+  padding-left: 280px;
+}
+
+/* Modal */
+
+.container .modalCont {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container .modalCont .modalTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #7952b3;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #c4c4c4;
+}
+.container .modalCont .modalTop h2 {
+  font-size: 1rem;
+}
+.container .modalCont .modalTop button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.container .modalCont form {
+  padding: 1rem;
+  user-select: none;
+}
+.container .modalCont form label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+.container .modalCont form div input {
+  width: 100%;
+  padding: 0.475rem 0.75rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 0.25rem;
+  outline: none;
+  margin-bottom: 15px;
+}
+.container .modalCont form div input:focus {
+  border-color: #747474;
+}
+.container .modalCont form button {
+  width: 100%;
+  padding: 0.575rem 0.75rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  color: #fff;
+  margin: 10px 0;
+  cursor: pointer;
+  background-color: #7952b3;
+}
+body .container .overlay,
+body .container .overlay2 {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  z-index: 10;
+  opacity: 0.5;
+  display: none;
+}
+body.modal-open .overlay2 {
+  display: block;
+  z-index: 101;
+}
+body.modal-open {
+  overflow: hidden;
+  margin-right: 17px;
+}
+@media (max-width: 800px) {
+  body.nav-open .overlay {
+    display: block;
+  }
+  body.nav-open .container {
+    margin-left: 0%;
+  }
+  body.nav-open,
+  body.modal-open {
+    overflow: hidden;
+    margin-right: 17px;
+  }
+
+  body.nav-open .container .topNav {
+    padding-left: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .container .heroSection .textCont {
+    align-items: center;
+    text-align: center;
+  }
+  .container .heroSection .textCont h1 {
+    font-size: 2rem;
+  }
+  .container .heroSection .textCont p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+  }
+  body.nav-open,
+  body.modal-open {
+    overflow: hidden;
+    margin-right: 0px;
+  }
+}
