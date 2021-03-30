@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Finder</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <section class="mealSection">
+      <article>
+        <header>
+          <h1>Recipe Finder</h1>
+          <p>Food is ingredient that binds us together</p>
+        </header>
+      </article>
+      <div class="formCont">
+        <form id="form" class="form">
+          <div class="icon">
+            <ion-icon name="search"></ion-icon>
+          </div>
+          <input
+            type="text"
+            placeholder="Enter the food name"
+            id="userInput"
+            autocomplete="off"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div class="searchText">
+        <h2 id="searchName"></h2>
+      </div>
+      <div class="mealsCont" id="mealCont">
+        <img src="./asset/bg.png" id="bgFood" alt="" />
+      </div>
+    </section>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </body>
+</html>
