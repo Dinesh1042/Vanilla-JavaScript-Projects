@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;400;600;700&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+body {
+  .container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(243.18deg, #65dfc9 0%, #6596f6 100%);
+    .glass {
+      height: 85vh;
+      width: 90%;
+      max-width: 500px;
+      max-height: 520px;
+      min-height: 500px;
+      background-color: #fff;
+      border-radius: 2rem;
+      background: linear-gradient(
+        125.07deg,
+        rgba(255, 255, 255, 0.48) 0%,
+        rgba(255, 255, 255, 0.12) 99.06%
+      );
+      backdrop-filter: blur(53px);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      z-index: 4;
+      
+    }
+  }
+}
+
+// Glass Items
+
+body .container .glass {
+  .musicCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    header {
+      padding: 1rem;
+      h1 {
+        color: #fff;
+      }
+    }
+    .imgCont {
+      height: 250px;
+      width: 250px;
+      border-radius: 0.8rem;
+      overflow: hidden;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .nameAndAuthor {
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      .songName {
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+      .author {
+        line-height: 1.5;
+        font-size: 14px;
+      }
+    }
+    // Progress
+    .progressAndTime {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 400px;
+      .progressCont {
+        width: 100%;
+        margin: 0% auto;
+        .progress {
+          height: 5px;
+          border-radius: 999px;
+          position: relative;
+          background: rgba(255, 255, 255, 0.3);
+          overflow: hidden;
+          cursor: pointer;
+        }
+        .progressFlow {
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          border-radius: 999px;
+          background-color: #fff; 
+        }
+      }
+      .timeCont {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        user-select: none;
+        color: #fff;
+        p {
+          padding: 0.5rem 0.2rem;
+          font-size: 1rem;
+        }
+      }
+    }
+    .icons {
+      padding-top: 0.2rem;
+      button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin: 0 15px;
+        ion-icon {
+          font-size: 2.5rem;
+          color: #dee5ef;
+        }
+      }
+    }
+  }
+}
+
+// Circles
+
+.container {
+  .circle {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.2)
+    );
+    z-index: -20;
+    filter: blur(5px);
+  }
+  .circle1 {
+    transform: translate(-50%, -50%) rotate(90deg);
+    top: 30%;
+    left: 15%;
+  }
+  .circle2 {
+    right: -30%;
+    top: 75%;
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+}

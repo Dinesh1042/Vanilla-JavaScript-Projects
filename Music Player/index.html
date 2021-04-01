@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="glass">
+        <div class="musicCont">
+          <header>
+            <h1>Music Player</h1>
+          </header>
+          <div class="imgCont">
+            <img id="logo" src="" alt="logo" />
+          </div>
+          <div class="nameAndAuthor">
+            <p id="songName" class="songName">Ukulele</p>
+            <p id="author" class="author">JV</p>
+          </div>
+
+          <div class="progressAndTime">
+            <div class="progressCont">
+              <audio id="audio" src=""></audio>
+              <div class="progress" id="progress">
+                <div class="progressFlow" id="progressFlow"></div>
+              </div>
+            </div>
+            <div class="timeCont">
+              <p id="currentTime">00:00</p>
+              <p id="totalTime">02:26</p>
+            </div>
+          </div>
+          <div class="icons">
+            <button id="prev">
+              <ion-icon name="play-back"></ion-icon>
+            </button>
+            <button id="play">
+              <ion-icon name="play"></ion-icon>
+            </button>
+            <button id="forward">
+              <ion-icon name="play-forward"></ion-icon>
+            </button>
+          </div>
+        </div>
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+      </section>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </body>
+</html>
