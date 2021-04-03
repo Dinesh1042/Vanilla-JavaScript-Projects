@@ -1,6 +1,6 @@
 # Vanilla JavaScript Projects
 This repository contains only vanilla JavaScript Projects
-### The Project List
+> ### The Project List
  
  1. [Carousel Slider](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Curousel%20Slider)
  2. [FAQ](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/FAQ)
