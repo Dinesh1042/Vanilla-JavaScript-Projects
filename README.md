@@ -12,4 +12,4 @@ This repository contains only vanilla JavaScript Projects
  8. [Form Validation](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Form%20Validation)
  9. [Random People Wealth](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Random%20People%20Wealth)
  10. [Analog Clock](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Analog%20Clock)
- 11. [CalCulator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Calculator)
+ 11. [Calculator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Calculator)
