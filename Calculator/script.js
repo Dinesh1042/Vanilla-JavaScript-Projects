@@ -36,18 +36,7 @@ alloperatorEl.forEach((operator) => {
 
 // Equal To EventListener
 
-equalToEl.addEventListener("click", (e) => {
-  if (numberCurrent && lastOperator && numberTotal) {
-    calculateTotal();
-    currentNumberEl.innerHTML = tempResult;
-    numberTotal = tempResult;
-    tempResult = tempResult;
-    numberCurrent = ``;
-    totalNumberEl.innerHTML = ``;
-    tempResultEl.innerHTML = ``;
-    isEqualToClicked = true;
-  }
-});
+equalToEl.addEventListener("click", finalResult);
 
 // ClearAll
 
@@ -151,13 +140,25 @@ function clearLast() {
   currentNumberEl.innerHTML = numberCurrent;
 }
 
+function finalResult() {
+  if (numberCurrent && lastOperator && numberTotal) {
+    calculateTotal();
+    currentNumberEl.innerHTML = tempResult;
+    numberTotal = tempResult;
+    tempResult = tempResult;
+    numberCurrent = ``;
+    totalNumberEl.innerHTML = ``;
+    tempResultEl.innerHTML = ``;
+    isEqualToClicked = true;
+  }
+}
+
 // Button Ripple Effect
 
 allButtonsEl.forEach((button) => {
   button.addEventListener("click", (e) => {
     let topPos = e.clientY - button.getBoundingClientRect().top;
     let leftPos = e.clientX - button.getBoundingClientRect().left;
-
     const spanEl = document.createElement("span");
     spanEl.classList.add("overlay");
     spanEl.style.cssText = `
@@ -178,4 +179,50 @@ allButtonsEl.forEach((button) => {
   });
 });
 
-function buttonRipple(button) {}
+// KeyBoard Events
+
+window.addEventListener("keyup", (e) => {
+  if (
+    e.key == 1 ||
+    e.key == 2 ||
+    e.key == 3 ||
+    e.key == 4 ||
+    e.key == 5 ||
+    e.key == 6 ||
+    e.key == 7 ||
+    e.key == 8 ||
+    e.key == 9 ||
+    e.key == 0 ||
+    e.key == "."
+  ) {
+    clickBtn(e.key);
+  } else if (
+    e.key == "/" ||
+    e.key == "+" ||
+    e.key == "-" ||
+    e.key == "%" ||
+    e.key == "*"
+  ) {
+    operationBtn(e.key);
+  } else if (e.key === "Enter" || e.key === "=") {
+    return finalResult();
+  } else if (e.key === "Backspace") {
+    clearLast();
+  }
+});
+
+function clickBtn(key) {
+  allNumberEl.forEach((button) => {
+    if (button.dataset.value == key) {
+      button.click();
+    }
+  });
+}
+
+function operationBtn(key) {
+  alloperatorEl.forEach((op) => {
+    if (op.dataset.value == key) {
+      op.click();
+    }
+  });
+}
