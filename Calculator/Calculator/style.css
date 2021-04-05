@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  background-color: #f5f5f7;
+}
+body .container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container .calculator {
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+body .container .calculator .displayCont {
+  background: linear-gradient(to right top, #b5b6cf, #807ff9);
+  color: #fff;
+  /* clip-path: ellipse(100% 45% at 50% 44%); */
+  text-align: right;
+}
+body .container .calculator .displayCont .display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1.5rem 1.8rem;
+  position: relative;
+}
+body .container .calculator .displayCont .display h1 {
+  height: 40px;
+}
+body .container .calculator .displayCont .display .tempResult {
+  position: absolute;
+  left: 18px;
+  bottom: 10px;
+  color: #d2d2ff;
+}
+
+body .container .calculator .displayCont .display .totalNumber {
+  color: #d2d2ff;
+  font-size: 1rem;
+  height: 20px;
+}
+
+body .container .calculator .numberCont {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+body .container .calculator .numberCont div {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(20px);
+}
+body .container .calculator .numberCont div.number0 {
+  grid-column: span 2;
+}
+body .container .calculator .numberCont div.operator {
+  color: #4f4ef7;
+}
+
+/* Overlays */
+
+body .container .calculator .numberCont div:active {
+  color: #4f4ef7;
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

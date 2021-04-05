@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oop Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="displayCont">
+          <div class="display">
+            <p class="totalValue" id="totalValue">0</p>
+            <h1 class="currentValue" id="currentValue">0</h1>
+            <p class="tempValue" id="tempValue">0</p>
+          </div>
+        </div>
+        <div class="numberCont">
+          <div class="clear" id="clear"><p>C</p></div>
+          <div class="allClear" id="allClear"><p>AC</p></div>
+          <div class="operator modulus" data-value="%"><p>%</p></div>
+          <div class="operator divide" data-value="/"><p>&divide;</p></div>
+
+          <div class="number number7" data-value="7"><p>7</p></div>
+          <div class="number number8" data-value="8"><p>8</p></div>
+          <div class="number number9" data-value="9"><p>9</p></div>
+
+          <div class="operator multiply" data-value="*"><p>&times;</p></div>
+
+          <div class="number number4" data-value="4"><p>4</p></div>
+          <div class="number number5" data-value="5"><p>5</p></div>
+          <div class="number number6" data-value="6"><p>6</p></div>
+
+          <div class="operator minus" data-value="-"><p>&minus;</p></div>
+
+          <div class="number number1" data-value="1"><p>1</p></div>
+          <div class="number number2" data-value="2"><p>2</p></div>
+          <div class="number number3" data-value="3"><p>3</p></div>
+
+          <div class="operator add" data-value="+"><p>+</p></div>
+
+          <div class="number number0" data-value="0"><p>0</p></div>
+          <div class="number dot" data-value="."><p>.</p></div>
+
+          <div class="equalTo" data-value="=" id="equalTo"><p>&equals;</p></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

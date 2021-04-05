@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap");
+
+$lightGray: #ececec;
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+body .container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $lightGray;
+  .calculator {
+    width: 90%;
+    max-width: 260px;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    overflow: hidden;
+    background: linear-gradient(to right top, #167235c7, #4aad37);
+    .displayCont {
+      padding: 1rem;
+      text-align: right;
+      color: #fff;
+      position: relative;
+      .display {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding: 0.5rem 0.7rem;
+        padding-bottom: 0;
+        .tempValue {
+          position: absolute;
+          left: 15px;
+          bottom: 10px;
+          color: #fff;
+          opacity: 0.5;
+        }
+        .totalValue {
+          color: #fff;
+          opacity: 0.5;
+          height: 22px;
+        }
+        h1 {
+          height: 42px;
+        }
+        .currentValue.final {
+          color: #fff9b0;
+        }
+      }
+    }
+    .numberCont {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem 1rem 0 0;
+      overflow: hidden;
+      background-color: #fff;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        cursor: pointer;
+        background-color: #fff;
+        user-select: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: rgb(116, 116, 116);
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        p {
+          z-index: 1;
+          pointer-events: none;
+        }
+        .ripple {
+          position: absolute;
+          height: 200px;
+          width: 200px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #4bad3733;
+          animation: 3s ease rippleEffect;
+        }
+      }
+      div.number0 {
+        grid-column: span 2;
+      }
+      div:hover {
+        color: #4aad37;
+        background-color: rgba(100,100,100,0.1);
+      }
+      div.operator {
+        color: #4aad37;
+      }
+    }
+  }
+}
+
+@keyframes rippleEffect {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
