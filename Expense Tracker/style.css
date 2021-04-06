@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700;800&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  background-color: #eeeef5;
+  width: 100%;
+}
+
+body .container {
+  max-width: 800px;
+  margin: 0% auto;
+}
+
+body .container header {
+  padding: 1.5rem;
+  width: 95%;
+  position: relative;
+}
+
+body .container header .title {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+body .container header .title h1 {
+  color: #6b6b6b;
+}
+
+body .container header .title .underline {
+  height: 4px;
+  width: 70%;
+  border-radius: 99px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#20bf55), to(#01baef));
+  background: linear-gradient(to right bottom, #20bf55, #01baef);
+}
+
+body .container .heroSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0% auto;
+  width: 100%;
+}
+
+body .container .dashboard {
+  background: -webkit-gradient(linear, left top, right bottom, from(#20bf55), to(#01baef));
+  background: linear-gradient(to right bottom, #20bf55, #01baef);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  width: 90%;
+  margin: 0% auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .container .dashboard .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -32px;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+
+body .container .dashboard .icon ion-icon {
+  font-size: 1.3rem;
+}
+
+body .container .dashboard > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+body .container .dashboard > div h1 {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+body .container .dashboard > div p {
+  color: #fff;
+  opacity: 0.7;
+}
+
+body .heroSection .userInputCont {
+  width: 90%;
+  margin: 0% auto;
+  margin-top: 2rem;
+}
+
+body .heroSection .userInputCont form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+body .heroSection .userInputCont form input {
+  padding: 0.475rem 0.75rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #01bbef60;
+  background-color: transparent;
+}
+
+body .heroSection .userInputCont form input::-webkit-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+body .heroSection .userInputCont form input:-ms-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+body .heroSection .userInputCont form input::-ms-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+body .heroSection .userInputCont form input::placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+body .heroSection .userInputCont form #userText {
+  text-transform: capitalize;
+}
+
+body .heroSection .userInputCont form input::-webkit-outer-spin-button,
+body .heroSection .userInputCont form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body .heroSection .userInputCont form input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body .heroSection .userInputCont form button {
+  border: none;
+  outline: none;
+  background: -webkit-gradient(linear, left top, right bottom, from(#20bf55cc), to(#01bbefc0));
+  background: linear-gradient(to right bottom, #20bf55cc, #01bbefc0);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0.475rem 0.75rem;
+  line-height: 1.5;
+}
+
+.expenseIncomeCont {
+  margin: 0% auto;
+  width: 90%;
+  margin-top: 2rem;
+}
+
+.expenseIncomeCont > p {
+  color: #6b6b6b;
+}
+
+.expenseIncomeCont ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.35rem;
+  margin: 1rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.expenseIncomeCont ul li .liLeft p {
+  text-transform: capitalize;
+}
+
+.expenseIncomeCont ul li .liRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.expenseIncomeCont ul li .liRight .textContent {
+  position: relative;
+  left: 0;
+  -webkit-transition: 0.5s ease left;
+  transition: 0.5s ease left;
+}
+
+.expenseIncomeCont ul li .liRight .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.5s ease transform;
+  transition: 0.5s ease transform;
+  margin-bottom: 5px;
+}
+
+.expenseIncomeCont ul li .liRight .controls button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.expenseIncomeCont ul li .liRight .controls button.edit {
+  margin-right: 10px;
+}
+
+.expenseIncomeCont ul li .liRight .controls button.edit ion-icon {
+  color: #0f5132;
+}
+
+.expenseIncomeCont ul li .liRight .controls button.delete ion-icon {
+  color: #842029;
+}
+
+.expenseIncomeCont ul li:hover .controls {
+  -webkit-transform: translateX(-140%);
+          transform: translateX(-140%);
+}
+
+.expenseIncomeCont ul li:hover .liRight .textContent {
+  left: -70px;
+}
+
+.expenseIncomeCont ul li.expense {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.expenseIncomeCont ul li.income {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+@media (max-width: 550px) {
+  body .heroSection .userInputCont form {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*# sourceMappingURL=style.css.map */

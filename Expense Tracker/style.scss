@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700;800&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+body {
+  background-color: #eeeef5;
+  width: 100%;
+  .container {
+    max-width: 800px;
+    margin: 0% auto;
+    header {
+      padding: 1.5rem;
+
+      width: 95%;
+      position: relative;
+      .title {
+        position: relative;
+        width: fit-content;
+        h1 {
+          color: #6b6b6b;
+        }
+        .underline {
+          height: 4px;
+          width: 70%;
+          border-radius: 99px;
+          background: linear-gradient(to right bottom, #20bf55, #01baef);
+        }
+      }
+    }
+    .heroSection {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0% auto;
+      width: 100%;
+    }
+    .dashboard {
+      background: linear-gradient(to right bottom, #20bf55, #01baef);
+      color: #fff;
+      padding: 1rem;
+      border-radius: 0.6rem;
+      width: 90%;
+      margin: 0% auto;
+
+      user-select: none;
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -32px;
+        cursor: pointer;
+        padding: 0.3rem;
+        border-radius: 50%;
+        ion-icon {
+          font-size: 1.3rem;
+        }
+      }
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        h1 {
+          margin-top: 5px;
+          margin-left: 5px;
+        }
+        p {
+          color: #fff;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+// Form Element
+body .heroSection {
+  .userInputCont {
+    width: 90%;
+    margin: 0% auto;
+    margin-top: 2rem;
+    form {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      input {
+        padding: 0.475rem 0.75rem;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        font-family: inherit;
+        line-height: 1.5;
+        border-radius: 5px;
+        border: 1px solid #01bbef60;
+        background-color: transparent;
+      }
+      input::placeholder {
+        color: #000;
+        opacity: 0.5;
+      }
+      #userText {
+        text-transform: capitalize;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      button {
+        border: none;
+        outline: none;
+        background: linear-gradient(to right bottom, #20bf55cc, #01bbefc0);
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-family: inherit;
+        padding: 0.475rem 0.75rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// Expenses
+.expenseIncomeCont {
+  margin: 0% auto;
+  width: 90%;
+  margin-top: 2rem;
+  > p {
+    color: #6b6b6b;
+  }
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      border-radius: 0.35rem;
+      margin: 1rem 0;
+      overflow: hidden;
+      position: relative;
+      .liLeft {
+        p {
+          text-transform: capitalize;
+        }
+      }
+      .liRight {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .textContent {
+          position: relative;
+          left: 0;
+          transition: 0.5s ease left;
+        }
+        .controls {
+          display: flex;
+          position: absolute;
+          left: 100%;
+          transform: translateX(100%);
+          transition: 0.5s ease transform;
+          margin-bottom: 5px;
+          button {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+          }
+          button.edit {
+            margin-right: 10px;
+            ion-icon {
+              color: #0f5132;
+            }
+          }
+          button.delete {
+            ion-icon {
+              color: #842029;
+            }
+          }
+        }
+      }
+    }
+    li:hover {
+      .controls {
+        transform: translateX(-140%);
+      }
+      .liRight .textContent {
+        left: -70px;
+      }
+    }
+    li.expense {
+      background-color: #f8d7da;
+      color: #842029;
+    }
+    li.income {
+      background-color: #d1e7dd;
+      color: #0f5132;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  body .heroSection {
+    .userInputCont {
+      form {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

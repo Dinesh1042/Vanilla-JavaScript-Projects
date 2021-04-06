@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <section class="heroSection">
+      <div class="container">
+        <header>
+          <div class="title">
+            <h1>Expense Tracker</h1>
+            <div class="underline"></div>
+          </div>
+        </header>
+        <div class="dashboard">
+          <div class="dashboardTop">
+            <div class="dashbordTopLeft">
+              <p>Your Balance</p>
+              <h1 id="balance">$0.00</h1>
+            </div>
+            <div class="dashbordTopRight">
+              <div class="icon">
+                <ion-icon name="information-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <div class="dashboardBottom">
+            <div class="dashbordBottomLeft">
+              <p>Income</p>
+              <h1 id="moneyPlus">$0.00</h1>
+            </div>
+            <div class="dashbordBottomRight">
+              <p>Expense</p>
+              <h1 id="moneyMinus">$0.00</h1>
+            </div>
+          </div>
+        </div>
+        <div class="userInputCont">
+          <form class="form" id="form">
+            <input
+              type="text"
+              id="userText"
+              placeholder="Enter the name income or expensess"
+              autocomplete="off"
+            />
+            <input
+              type="number"
+              name="userInput"
+              id="price"
+              placeholder="Enter the amount of income or expensess"
+              autocomplete="off"
+            />
+            <button type="submit">Add</button>
+          </form>
+        </div>
+        <div class="expenseIncomeCont">
+          <p>Transactions</p>
+          <ul id="list"></ul>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </body>
+</html>
