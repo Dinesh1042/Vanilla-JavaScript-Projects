@@ -15,3 +15,8 @@ This repository contains only vanilla JavaScript Projects
  | 10 | [Analog Clock](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Analog%20Clock) |
  | 11 | [Calculator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Calculator) |
  | 12 | [Expense Tracker](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Expense%20Tracker)
+ | 13 | [Quiz App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Quiz%20App) |
+ 
+ > ### Thanks for Visiting 😊
+ 
+ 
