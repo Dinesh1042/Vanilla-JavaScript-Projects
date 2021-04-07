@@ -208,6 +208,6 @@ body {
 @media (max-width: 600px) {
   .quizSection .bgImg {
     background-position: center center;
-    background-size: auto;
+    background-size: cover;
   }
 }
