@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700;800&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  background: #eefff0;
+}
+
+body section {
+  width: 100%;
+  max-width: 900px;
+  margin: 0% auto;
+  padding: 1rem;
+}
+
+body section nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+body section nav .title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+body section nav .title .textarea {
+  margin-left: 1rem;
+}
+
+body section nav .title .textarea h1 {
+  font-size: 2rem;
+  color: #676767;
+}
+
+body section nav .title .textarea h1 span {
+  position: relative;
+  cursor: pointer;
+}
+
+body section nav .title .textarea h1 span::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 80%;
+  background-color: #69df75;
+  border-radius: 999px;
+  bottom: 0%;
+  left: 0%;
+}
+
+body section nav .title .textarea p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+  color: #767676;
+  margin-top: 4px;
+}
+
+body section nav .title .textarea p span {
+  font-size: 18px;
+  margin-left: 5px;
+  color: #69df75a1;
+}
+
+body section nav .getStatBtn button {
+  padding: 0.675rem 1.5rem;
+  border: none;
+  outline: none;
+  background-color: #69df75;
+  color: #fff;
+  font-weight: normal;
+  border-radius: 0.25rem;
+  font-family: inherit;
+  user-select: none;
+  cursor: pointer;
+}
+
+body section .formCont {
+  box-sizing: unset;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+body section .formCont form {
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: auto 20%;
+  margin: 0% auto;
+  border-radius: 0.25rem;
+}
+
+body section .formCont form input,
+body section .formCont form button {
+  border: none;
+  padding: 0.575rem 0.75rem;
+  outline: none;
+  background-color: transparent;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+body section .formCont form input {
+  border: 1px solid #69df7588;
+  border-radius: 0.25rem 0 0 0.25rem;
+  border-right-width: 0;
+}
+
+body section .formCont form button {
+  border-radius: 0 0.25rem 0.25rem 0;
+  background: #69df75;
+  cursor: pointer;
+  color: #fff;
+}
+
+body section .listsCont {
+  width: 90%;
+  max-width: 600px;
+  margin: 0% auto;
+  margin-top: 2rem;
+}
+
+body section .listsCont ul {
+  list-style: none;
+}
+
+body section .listsCont ul li {
+  width: 100%;
+  background-color: #fff;
+  margin: 1rem 0;
+  border-radius: 0.45rem;
+  padding: 1rem;
+}
+
+body section .listsCont ul li .liMain {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body section .listsCont ul li .liMain .lileft {
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  word-break: break-word;
+}
+
+body section .listsCont ul li .liMain .lileft .check {
+  cursor: pointer;
+  margin-top: 1px;
+  user-select: none;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+body section .listsCont ul li .liMain .lileft .check .circle {
+  height: 18px;
+  width: 18px;
+  border: 1px solid #676767;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+body section .listsCont ul li .liMain .lileft .check span {
+  color: #69df75;
+}
+
+body section .listsCont ul li .liMain .lileft .todoText {
+  width: 100%;
+  margin-left: 3px;
+  position: relative;
+}
+
+body section .listsCont ul li .liMain .lileft .todoText h1 {
+  color: #505050;
+  font-weight: normal;
+  font-size: 1.2rem;
+  word-wrap: break-word;
+  margin-left: 5px;
+}
+
+body section .listsCont ul li .liMain .lileft .todoText p {
+  color: #b1b1b1;
+  font-size: 14px;
+}
+
+body section .listsCont ul li .liRight .icons button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem 0.6rem;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+body section .listsCont ul li .liRight .icons button span {
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+body section .listsCont ul li .liRight .icons button .ripple {
+  z-index: 0;
+}
+
+body section .listsCont ul li .liRight .icons .edit {
+  margin-right: 4px;
+  color: #69df75;
+}
+
+body section .listsCont ul li .liRight .icons .edit:hover {
+  background-color: #69df752d;
+}
+
+body section .listsCont ul li .liRight .icons .delete {
+  color: #fd3434;
+}
+
+body section .listsCont ul li .liRight .icons .delete:hover {
+  background-color: rgba(253, 52, 52, 0.171);
+}
+
+body section .listsCont ul li .todoDescription {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0%;
+  border-top: 1px solid #67676744;
+}
+
+body section .listsCont ul li .todoDescription p {
+  color: #6c6c6c;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+body section .listsCont ul li.completed {
+  opacity: 0.7;
+}
+
+body section .listsCont ul li.completed .lileft .todoText h1 {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #505050;
+}
+
+body section .ctaBtn {
+  position: relative;
+  overflow: hidden;
+}
+
+body section .ctaBtn p {
+  transform: translateZ(10px);
+}
+
+body .sideNavCont {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  transform: translateX(-100%);
+  z-index: 11;
+  transition: 0.5s ease transform;
+  height: 100vh;
+}
+
+body .sideNavCont nav {
+  height: 100%;
+  background-color: #fff;
+  padding: 1.5rem;
+}
+
+body .sideNavCont nav .topNav {
+  display: flex;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #67676762;
+}
+
+body .sideNavCont nav .topNav .textContent {
+  margin-left: 10px;
+}
+
+body .sideNavCont nav .topNav .textContent h1 {
+  color: #767676;
+}
+
+body .sideNavCont nav .topNav .textContent p {
+  color: #6c6c6c;
+}
+
+body .sideNavCont nav header {
+  margin-top: 1rem;
+}
+
+body .sideNavCont nav header p {
+  color: #a5a5a5;
+}
+
+body .sideNavCont nav .statsCont {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body .sideNavCont nav .statsCont .progressCont {
+  height: 130px;
+  width: 130px;
+  position: relative;
+}
+
+body .sideNavCont nav .statsCont .progressCont .pgC {
+  height: 130px;
+  width: 130px;
+  transform: translate(-5px, -5px) rotate(-90deg);
+}
+
+body .sideNavCont nav .statsCont .progressCont .pgC svg {
+  height: 130px;
+  width: 130px;
+}
+
+body .sideNavCont nav .statsCont .progressCont .pgC svg circle {
+  height: 100%;
+  width: 100%;
+  fill: none;
+  stroke-width: 10;
+  stroke: #a5a5a5;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  stroke-linecap: round;
+}
+
+body .sideNavCont nav .statsCont .progressCont .pgC svg #outer {
+  stroke-dashoffset: 0;
+}
+
+body .sideNavCont nav .statsCont .progressCont .pgC svg #progress {
+  stroke: #69df75;
+  stroke-dashoffset: calc(380 - (380 * 10) / 100);
+}
+
+body .sideNavCont nav .statsCont .progressCont .percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-57%, -57%);
+  font-size: 2rem;
+  color: #69df75;
+}
+
+body .sideNavCont nav .taskResult {
+  margin-top: 2rem;
+}
+
+body .sideNavCont nav .taskResult table,
+body .sideNavCont nav .taskResult td,
+body .sideNavCont nav .taskResult th {
+  border: 1px solid #676767;
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: left;
+}
+
+body .overlay,
+body .modalOverlay {
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  display: none;
+  animation: 0.5s ease overlayEffect;
+  opacity: 0.5;
+}
+
+body.userNameModal .modalOverlay {
+  display: flex;
+  opacity: 0.5;
+  animation: 0.5s ease overlayEffect;
+}
+
+body.sideActive {
+  overflow: hidden;
+}
+
+body.sideActive .sideNavCont {
+  transform: translateX(0);
+}
+
+body.sideActive .overlay {
+  display: flex;
+  opacity: 0.5;
+}
+
+body .modalCont {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body .modalCont .modal {
+  width: 350px;
+  max-width: 350px;
+  margin: 0% auto;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  padding: 1.3rem;
+}
+
+body .modalCont .modal .topCont {
+  display: flex;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 0.5rem;
+}
+
+body .modalCont .modal .topCont .textContent {
+  margin-left: 10px;
+}
+
+body .modalCont .modal .topCont .textContent h1 {
+  font-size: 20px;
+}
+
+body .modalCont .modal .topCont .textContent p {
+  font-size: 15px;
+}
+
+body .modalCont .modal form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+body .modalCont .modal form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 15px;
+}
+
+body .modalCont .modal form input,
+body .modalCont .modal form button {
+  padding: 0.375rem 0.75rem;
+  border: none;
+  outline: none;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+body .modalCont .modal form input {
+  border: 1px solid #767676ab;
+}
+
+body .modalCont .modal form button {
+  background-color: #69df75;
+  color: #fff;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+@keyframes rippleEffect {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes overlayEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 555px) {
+  body section nav {
+    padding: 1rem 0.1rem;
+  }
+  body section nav .title .textarea h1 {
+    font-size: 18px;
+  }
+  body section nav .title .textarea h1 span::after {
+    height: 2px;
+  }
+  body section nav .title .textarea p {
+    font-size: 14px;
+  }
+  body section .formCont form {
+    grid-template-columns: auto 25%;
+  }
+  body section .formCont form input,
+  body section .formCont form button {
+    font-size: 15px;
+  }
+  body section .listsCont .liRight .icons {
+    display: flex;
+  }
+}
+
+@media (max-width: 430px) {
+  body section .formCont form {
+    grid-template-columns: auto 30%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

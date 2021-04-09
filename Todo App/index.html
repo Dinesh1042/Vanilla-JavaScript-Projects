@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./Images/Logo.png" type="image/x-icon" />
+    <script defer src="./script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <!-- Nav -->
+      <nav>
+        <div class="title">
+          <div class="logo">
+            <img src="./Images/Logo.png" alt="logo" />
+          </div>
+          <div class="textarea">
+            <h1>Hey, <span id="userName">Dinesh</span></h1>
+            <p>Here is your Todo <span class="material-icons"> today </span></p>
+          </div>
+        </div>
+        <div class="getStatBtn">
+          <button id="getStats" class="ctaBtn">
+            <span class="ripple"></span>
+            <p>Get Stats</p>
+          </button>
+        </div>
+      </nav>
+      <!-- Form -->
+      <div class="formCont">
+        <form id="form" class="form">
+          <input
+            type="text"
+            id="userInput"
+            class="userInput"
+            placeholder="Enter your Todo and use // For description"
+            autocomplete="off"
+          />
+          <button type="submit" id="AddTodoBtn" class="ctaBtn">
+            <p>Add Todo</p>
+          </button>
+        </form>
+      </div>
+      <!-- Todo Lists -->
+      <div class="listsCont">
+        <ul class="lists" id="lists">
+          <!-- End Of List -->
+        </ul>
+      </div>
+    </section>
+    <div class="sideNavCont">
+      <nav>
+        <div class="topNav">
+          <div class="logo">
+            <img src="./Images/Logo.png" alt="logo" />
+          </div>
+          <div class="textContent">
+            <h1>Dinesh</h1>
+            <p>Todo App</p>
+          </div>
+        </div>
+        <header>
+          <p>Your Stats</p>
+        </header>
+        <div class="statsCont">
+          <div class="progressCont">
+            <div class="pgC">
+              <svg>
+                <circle cx="60" cy="60" r="60" id="outer"></circle>
+                <circle cx="60" cy="60" r="60" id="progress"></circle>
+              </svg>
+            </div>
+            <div class="percent" id="percent">
+              <h1>10%</h1>
+            </div>
+          </div>
+        </div>
+        <div class="taskResult">
+          <table>
+            <tr>
+              <th>Total Task</th>
+              <td id="totalTask">5</td>
+            </tr>
+            <tr>
+              <th>Completed Task</th>
+              <td id="CompletedTask">5</td>
+            </tr>
+            <tr>
+              <th>InCompleted Task</th>
+              <td id="inCompletedTask">5</td>
+            </tr>
+          </table>
+        </div>
+      </nav>
+    </div>
+    <div class="overlay"></div>
+    <div class="modalOverlay"></div>
+  </body>
+</html>
