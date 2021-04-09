@@ -1,6 +1,6 @@
 # Todo App
 
-![Todo App]()
+![Todo App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/blob/main/Todo%20App/Design/Todo%20App.png?raw=true)
 
 The purpose of a **Todo App** is to set your mind at ease that you know what your responsibilities are. That's the main reason you should keep one.
 Stick with your Goals by achieving your tasks.
