@@ -16,7 +16,7 @@ This repository contains only vanilla JavaScript Projects
  | 11 | [Calculator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Calculator) |
  | 12 | [Expense Tracker](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Expense%20Tracker)
  | 13 | [Quiz App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Quiz%20App) |
- 
+ | 14 | [Todo App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Todo%20App)
  
  Report if there is any bug🐛 in these projects
 
