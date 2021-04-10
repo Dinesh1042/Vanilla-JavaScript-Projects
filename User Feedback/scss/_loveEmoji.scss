@@ -1,0 +1,92 @@
+body section .feedbackCont {
+  .emojiCont {
+    .loveIt {
+      @include emojiFace();
+      position: relative;
+      .emojiFace,
+      .eyes,
+      .mouth {
+        position: absolute;
+      }
+      .emojiFace {
+        animation: 2s loveMouth linear;
+      }
+      .eyes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70px;
+        left: calc(50% + 42px);
+        top: 42px;
+      }
+      .eye {
+        height: 19px;
+        width: 19px;
+        background: #ec4133;
+        transform: rotate(45deg);
+        animation: 0.5s loveEye linear;
+        &::after,
+        &::before {
+          content: "";
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          background-color: #ec4133;
+          border-radius: 50%;
+        }
+        &::after {
+          top: -11px;
+        }
+        &::before {
+          left: -11px;
+        }
+      }
+      //   Mouth
+      .mouth {
+        height: 35px;
+        width: 70px;
+        background: #aa7408;
+        border-radius: 20% 20% 50px 50px;
+        left: calc(50% + 42px);
+        top: 88px;
+        overflow: hidden;
+
+        &::after {
+          content: "";
+          height: 30px;
+          width: 50px;
+          background-color: #ec4133;
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          animation: 0.5s loveMouth linear;
+        }
+      }
+    }
+  }
+}
+
+@keyframes loveEye {
+  0% {
+    transform: scale(0.9) rotate(45deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(45deg);
+  }
+}
+
+@keyframes loveMouth {
+  60% {
+    transform: translate(0) translateY(10px);
+  }
+
+  50% {
+    transform: translate(-5px) translateY(10px) scale(0.9);
+  }
+
+  55% {
+    transform: translate(5px) translateY(10px) scale(0.9);
+  }
+}

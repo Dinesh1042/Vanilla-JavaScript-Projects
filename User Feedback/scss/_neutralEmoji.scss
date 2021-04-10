@@ -1,0 +1,45 @@
+$eyeColor: #aa7408;
+body section .feedbackCont {
+  .emojiCont {
+    .neutral {
+      @include emojiFace();
+      position: relative;
+      div {
+        position: absolute;
+      }
+      .eye {
+        height: 22px;
+        width: 16px;
+        background: $eyeColor;
+        border-radius: 50%;
+        box-shadow: 50px 0 0 0 $eyeColor;
+        top: 40px;
+        left: calc(50% + 40px);
+        animation: neutralEyeBlink 1s ease;
+      }
+      .mouth {
+        height: 8px;
+        width: 70px;
+        background: $eyeColor;
+        border-radius: 99px;
+        top: 100px;
+        left: calc(50% + 38px);
+        animation: 2s ease neutralEmojiMouth;
+      }
+    }
+  }
+}
+
+@keyframes neutralEmojiMouth {
+  0% {
+    transform: rotate(10deg) scale(0.5);
+    height: 18px;
+  }
+}
+
+@keyframes neutralEyeBlink {
+  0% {
+    height: 4px;
+    top: 48px;
+  }
+}

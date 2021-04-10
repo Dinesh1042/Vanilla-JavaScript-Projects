@@ -1,0 +1,53 @@
+body section .feedbackCont {
+  .emojiCont {
+    margin: 2rem 0;
+    height: 150px;
+    width: 150px;
+    .smile {
+      @include emojiFace();
+      div {
+        position: absolute;
+      }
+
+      .emojiFace {
+        top: 47%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .emojiEye {
+        top: 5px;
+        left: calc(50% - 8px);
+        height: 24px;
+        width: 16px;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: 25px 0 0 0 #aa7408, -25px 0 0 0 #aa7408;
+        animation: 0.5s ease smileEye;
+      }
+      .emojiMouth {
+        height: 35px;
+        width: 70px;
+        background: #aa7408;
+        border-radius: 5% 5% 50px 50px;
+        left: calc(50% - 35px);
+        top: 56px;
+        animation: 0.5s ease smileMouth;
+      }
+    }
+  }
+}
+
+@keyframes smileMouth {
+  0% {
+    height: 5px;
+    top: 70px;
+    transform: scale(0.8);
+  }
+}
+@keyframes smileEye {
+  0% {
+    height: 15px;
+    top: 10px;
+    transform: scale(0.8);
+  }
+}

@@ -1,0 +1,81 @@
+$eyeColor: #313131;
+
+body section .feedbackCont {
+  .emojiCont {
+    .angry {
+      @include emojiFace();
+      background: linear-gradient(#df2d56, #ffda6a);
+      div {
+        position: absolute;
+      }
+      .emojiFace {
+        top: 47%;
+        left: 50%;
+        transform: translateX(-20px);
+        animation: angryEmoji 2s ease-in;
+      }
+      .eyeBrow {
+        top: 25px;
+        height: 6px;
+        width: 6px;
+        background: $eyeColor;
+        border-radius: 50%;
+        box-shadow: -30px 0px 0 0 $eyeColor, 30px 0px 0 0 $eyeColor,
+          60px 0px 0 0 $eyeColor;
+        &::after,
+        &::before {
+          content: "";
+          height: 22px;
+          width: 35px;
+          border: 6px solid transparent;
+          position: absolute;
+          border-radius: 50%;
+          border-bottom-color: $eyeColor;
+          top: -23px;
+          left: -35px;
+        }
+        &::before {
+          left: calc(50% + 20px);
+        }
+      }
+      .eye {
+        height: 16px;
+        width: 14px;
+        background-color: $eyeColor;
+        border-radius: 50%;
+        left: -18px;
+        top: 30px;
+        box-shadow: 55px 0 0 $eyeColor;
+      }
+      .mouth {
+        height: 30px;
+        width: 50px;
+        background: $eyeColor;
+        border-radius: 50%;
+        top: 70px;
+        left: calc(50% - 5px);
+        animation: 2s ease-in angryMouth;
+      }
+    }
+  }
+}
+
+@keyframes angryEmoji {
+  60% {
+    transform: translate(0) translateY(10px);
+  }
+
+  50% {
+    transform: translate(-5px) translateY(10px) scale(0.9);
+  }
+
+  55% {
+    transform: translate(5px) translateY(10px) scale(0.9);
+  }
+}
+@keyframes angryMouth {
+  55% {
+    height: 20px;
+    width: 40px;
+  }
+}

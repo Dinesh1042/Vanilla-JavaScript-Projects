@@ -1,0 +1,21 @@
+body section .starCont .stars {
+
+  input {
+    display: none;
+  }
+  label {
+    font-size: 40px;
+    color: rgb(163, 163, 163);
+    padding: 4px;
+    transition: 0.5s ease color;
+    float: right;
+    cursor: pointer;
+  }
+  input:not(:checked) ~ label:hover,
+  input:not(:checked) ~ label:hover ~ label {
+    color: #fd4;
+  }
+  input:checked ~ label {
+    color: rgb(255, 208, 0);
+  }
+}

@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;600;700&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: aliceblue;
+}
+
+body section .feedbackCont {
+  width: 90%;
+  max-width: 350px;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+body section .feedbackCont .textarea h1 {
+  color: #6f6282;
+  text-align: center;
+}
+
+body section .feedbackCont .emojiCont .angry {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#ffed65, #eead2f);
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px 2px #eead2b, rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: linear-gradient(#df2d56, #ffda6a);
+}
+
+body section .feedbackCont .emojiCont .angry div {
+  position: absolute;
+}
+
+body section .feedbackCont .emojiCont .angry .emojiFace {
+  top: 47%;
+  left: 50%;
+  transform: translateX(-20px);
+  animation: angryEmoji 2s ease-in;
+}
+
+body section .feedbackCont .emojiCont .angry .eyeBrow {
+  top: 25px;
+  height: 6px;
+  width: 6px;
+  background: #313131;
+  border-radius: 50%;
+  box-shadow: -30px 0px 0 0 #313131, 30px 0px 0 0 #313131, 60px 0px 0 0 #313131;
+}
+
+body section .feedbackCont .emojiCont .angry .eyeBrow::after, body section .feedbackCont .emojiCont .angry .eyeBrow::before {
+  content: "";
+  height: 22px;
+  width: 35px;
+  border: 6px solid transparent;
+  position: absolute;
+  border-radius: 50%;
+  border-bottom-color: #313131;
+  top: -23px;
+  left: -35px;
+}
+
+body section .feedbackCont .emojiCont .angry .eyeBrow::before {
+  left: calc(50% + 20px);
+}
+
+body section .feedbackCont .emojiCont .angry .eye {
+  height: 16px;
+  width: 14px;
+  background-color: #313131;
+  border-radius: 50%;
+  left: -18px;
+  top: 30px;
+  box-shadow: 55px 0 0 #313131;
+}
+
+body section .feedbackCont .emojiCont .angry .mouth {
+  height: 30px;
+  width: 50px;
+  background: #313131;
+  border-radius: 50%;
+  top: 70px;
+  left: calc(50% - 5px);
+  animation: 2s ease-in angryMouth;
+}
+
+@keyframes angryEmoji {
+  60% {
+    transform: translate(0) translateY(10px);
+  }
+  50% {
+    transform: translate(-5px) translateY(10px) scale(0.9);
+  }
+  55% {
+    transform: translate(5px) translateY(10px) scale(0.9);
+  }
+}
+
+@keyframes angryMouth {
+  55% {
+    height: 20px;
+    width: 40px;
+  }
+}
+
+body section .feedbackCont .emojiCont .sad {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#ffed65, #eead2f);
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px 2px #eead2b, rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: linear-gradient(to bottom, #df2d56, #ffda6a);
+  position: relative;
+}
+
+body section .feedbackCont .emojiCont .sad div {
+  position: absolute;
+}
+
+body section .feedbackCont .emojiCont .sad .emojiFace {
+  animation: 2s ease sadEmoji;
+  left: 50%;
+}
+
+body section .feedbackCont .emojiCont .sad .eye {
+  height: 22px;
+  width: 16px;
+  border-radius: 50%;
+  background: #272727;
+  box-shadow: 50px 0 0 #272727;
+  top: 40px;
+  left: calc(50% - 35px);
+  animation: 1s ease sadEye;
+}
+
+body section .feedbackCont .emojiCont .sad .mouth {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #272727;
+  top: 50px;
+  box-shadow: 47px 12px 0 #272727;
+  top: 90px;
+  left: calc(50% - 30px);
+}
+
+body section .feedbackCont .emojiCont .sad .mouth::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 55px;
+  border: 8px solid transparent;
+  border-radius: 50%;
+  transform: rotate(15deg);
+  border-top-color: #272727;
+  left: -11px;
+  top: -1px;
+}
+
+@keyframes sadEmoji {
+  0% {
+    transform: scale(0.94) translateY(15px);
+  }
+  30% {
+    transform: translateX(-5px) translateY(7px);
+  }
+  50% {
+    transform: translateX(15px) translateY(0);
+  }
+}
+
+@keyframes sadEye {
+  0% {
+    height: 18px;
+    top: 45px;
+    transform: scale(0.8);
+  }
+}
+
+body section .feedbackCont .emojiCont .neutral {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#ffed65, #eead2f);
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px 2px #eead2b, rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: relative;
+}
+
+body section .feedbackCont .emojiCont .neutral div {
+  position: absolute;
+}
+
+body section .feedbackCont .emojiCont .neutral .eye {
+  height: 22px;
+  width: 16px;
+  background: #aa7408;
+  border-radius: 50%;
+  box-shadow: 50px 0 0 0 #aa7408;
+  top: 40px;
+  left: calc(50% + 40px);
+  animation: neutralEyeBlink 1s ease;
+}
+
+body section .feedbackCont .emojiCont .neutral .mouth {
+  height: 8px;
+  width: 70px;
+  background: #aa7408;
+  border-radius: 99px;
+  top: 100px;
+  left: calc(50% + 38px);
+  animation: 2s ease neutralEmojiMouth;
+}
+
+@keyframes neutralEmojiMouth {
+  0% {
+    transform: rotate(10deg) scale(0.5);
+    height: 18px;
+  }
+}
+
+@keyframes neutralEyeBlink {
+  0% {
+    height: 4px;
+    top: 48px;
+  }
+}
+
+body section .feedbackCont .emojiCont {
+  margin: 2rem 0;
+  height: 150px;
+  width: 150px;
+}
+
+body section .feedbackCont .emojiCont .smile {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#ffed65, #eead2f);
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px 2px #eead2b, rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+body section .feedbackCont .emojiCont .smile div {
+  position: absolute;
+}
+
+body section .feedbackCont .emojiCont .smile .emojiFace {
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body section .feedbackCont .emojiCont .smile .emojiEye {
+  top: 5px;
+  left: calc(50% - 8px);
+  height: 24px;
+  width: 16px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 0 0 0 #aa7408, -25px 0 0 0 #aa7408;
+  animation: 0.5s ease smileEye;
+}
+
+body section .feedbackCont .emojiCont .smile .emojiMouth {
+  height: 35px;
+  width: 70px;
+  background: #aa7408;
+  border-radius: 5% 5% 50px 50px;
+  left: calc(50% - 35px);
+  top: 56px;
+  animation: 0.5s ease smileMouth;
+}
+
+@keyframes smileMouth {
+  0% {
+    height: 5px;
+    top: 70px;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes smileEye {
+  0% {
+    height: 15px;
+    top: 10px;
+    transform: scale(0.8);
+  }
+}
+
+body section .feedbackCont .emojiCont .loveIt {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#ffed65, #eead2f);
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px 2px #eead2b, rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: relative;
+}
+
+body section .feedbackCont .emojiCont .loveIt .emojiFace,
+body section .feedbackCont .emojiCont .loveIt .eyes,
+body section .feedbackCont .emojiCont .loveIt .mouth {
+  position: absolute;
+}
+
+body section .feedbackCont .emojiCont .loveIt .emojiFace {
+  animation: 2s loveMouth linear;
+}
+
+body section .feedbackCont .emojiCont .loveIt .eyes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70px;
+  left: calc(50% + 42px);
+  top: 42px;
+}
+
+body section .feedbackCont .emojiCont .loveIt .eye {
+  height: 19px;
+  width: 19px;
+  background: #ec4133;
+  transform: rotate(45deg);
+  animation: 0.5s loveEye linear;
+}
+
+body section .feedbackCont .emojiCont .loveIt .eye::after, body section .feedbackCont .emojiCont .loveIt .eye::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #ec4133;
+  border-radius: 50%;
+}
+
+body section .feedbackCont .emojiCont .loveIt .eye::after {
+  top: -11px;
+}
+
+body section .feedbackCont .emojiCont .loveIt .eye::before {
+  left: -11px;
+}
+
+body section .feedbackCont .emojiCont .loveIt .mouth {
+  height: 35px;
+  width: 70px;
+  background: #aa7408;
+  border-radius: 20% 20% 50px 50px;
+  left: calc(50% + 42px);
+  top: 88px;
+  overflow: hidden;
+}
+
+body section .feedbackCont .emojiCont .loveIt .mouth::after {
+  content: "";
+  height: 30px;
+  width: 50px;
+  background-color: #ec4133;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: 0.5s loveMouth linear;
+}
+
+@keyframes loveEye {
+  0% {
+    transform: scale(0.9) rotate(45deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(45deg);
+  }
+}
+
+@keyframes loveMouth {
+  60% {
+    transform: translate(0) translateY(10px);
+  }
+  50% {
+    transform: translate(-5px) translateY(10px) scale(0.9);
+  }
+  55% {
+    transform: translate(5px) translateY(10px) scale(0.9);
+  }
+}
+
+body section .starCont .stars input {
+  display: none;
+}
+
+body section .starCont .stars label {
+  font-size: 40px;
+  color: #a3a3a3;
+  padding: 4px;
+  transition: 0.5s ease color;
+  float: right;
+  cursor: pointer;
+}
+
+body section .starCont .stars input:not(:checked) ~ label:hover,
+body section .starCont .stars input:not(:checked) ~ label:hover ~ label {
+  color: #fd4;
+}
+
+body section .starCont .stars input:checked ~ label {
+  color: #ffd000;
+}
+/*# sourceMappingURL=style.css.map */
