@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body section {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: aliceblue;
+}
+body section .container {
+  background-color: #fff;
+  padding: 1.5rem;
+  width: 95%;
+  max-width: 400px;
+  border-radius: 0.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  animation: 0.5s ease shareModalAnimation;
+}
+body section .container header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body section .container header h2 {
+  color: #5f656e;
+}
+body section .container header i {
+  color: rgb(247, 121, 121);
+  cursor: pointer;
+}
+body section .container main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-gap: 1rem;
+  margin-top: 0.5rem;
+}
+body section .container main div {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+body section .container main div .icon {
+  padding: 0.7rem;
+  background-color: var(--bgcolor);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease background-color;
+}
+body section .container main div .icon:hover {
+  background-color: var(--hoverColor);
+}
+body section .container main div .icon:hover i {
+  transform: scale(1.05);
+}
+body section .container main div .icon i {
+  font-size: 1.94rem;
+  color: var(--iconColor);
+  transition: 0.3s ease transform;
+}
+body section .container main div p {
+  font-size: 15px;
+  margin-top: 10px;
+  color: #8f9297;
+}
+
+body section .container main div.facebook__cont {
+  --iconColor: #4267b2;
+  --bgcolor: #4267b218;
+  --hoverColor: rgba(51, 102, 153, 0.178);
+}
+body section .container main div.whatsapp__cont {
+  --iconColor: #25d366;
+  --bgcolor: #25d36518;
+  --hoverColor: #25d3651f;
+}
+body section .container main div.twitter__cont {
+  --iconColor: #1da1f2;
+  --bgcolor: #1da0f218;
+  --hoverColor: #1da0f225;
+}
+body section .container main div.discord__cont {
+  --iconColor: #7289da;
+  --bgcolor: #7289da21;
+  --hoverColor: #7289da2f;
+}
+body section .container main div.instagram__cont {
+  --iconColor: #b93aae;
+  --bgcolor: #b93aae1c;
+  --hoverColor: #b93aae27;
+}
+body section .container main div.messenger__cont {
+  --iconColor: #006aff;
+  --bgcolor: #006aff18;
+  --hoverColor: #006aff1e;
+}
+body section .container main div.reddit__cont {
+  --iconColor: #ff5700;
+  --bgcolor: #ff550018;
+  --hoverColor: #ff550027;
+}
+body section .container main div.telegram__cont {
+  --iconColor: #0088cc;
+  --bgcolor: #0088cc17;
+  --hoverColor: #0088cc1c;
+}
+
+body .container .pageLink {
+  margin-top: 2rem;
+}
+body .container .pageLink header h3 {
+  font-size: 16px;
+  color: #5f656e;
+}
+body .container .pageLink .url {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #7289da2f;
+  padding: 1rem;
+  border-radius: 0.45rem;
+  color: #8f9297;
+  margin-top: 1rem;
+}
+body .container .pageLink .url i {
+  cursor: pointer;
+  transition: 0.3s ease color;
+}
+body .container .pageLink .url i:hover {
+  color: rgb(80, 80, 80);
+}
+
+section button#share {
+  padding: 0.57rem 1rem;
+  line-height: 1.5;
+  font-family: inherit;
+  background: #7952b3;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+section button#share p {
+  transform: translateZ(-10px);
+}
+section button#share p i {
+  margin-left: 0.3rem;
+}
+
+body .overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: #111;
+  opacity: 0.4;
+  display: none;
+  animation: 1s ease overlayAnimation;
+}
+body.shareModal .overlay {
+  display: flex;
+}
+body.shareModal .container {
+  display: unset;
+}
+body .container .pageLink .url .copyIcon {
+  cursor: pointer;
+}
+body .container .pageLink .url .copyIcon p {
+  font-size: 0.8rem;
+}
+
+@keyframes rippleEffect {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes shareModalAnimation {
+  0% {
+    top: 45%;
+    opacity: 0.9;
+  }
+}
+@keyframes overlayAnimation {
+  0% {
+    opacity: 0;
+  }
+}
