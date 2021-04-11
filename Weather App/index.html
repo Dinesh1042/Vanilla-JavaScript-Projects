@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./skycons.js"></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topContainer">
+        <div class="logo">
+          <canvas id="icon" width="100" height="100"></canvas>
+        </div>
+        <div class="countryName">
+          <h1 id="country">Chennai,India</h1>
+        </div>
+      </div>
+      <div class="weatherInfo">
+        <div class="windSpeed">
+          <h1>Wind Speed</h1>
+          <p id="windSpeed">21.4</p>
+        </div>
+        <div class="temperature">
+          <h1>Tempreature</h1>
+          <p id="temperature">32</p>
+        </div>
+        <div class="precip">
+          <h1>Precipitation</h1>
+          <p id="precipitation">0.1</p>
+        </div>
+      </div>
+      <div class="searchCont">
+        <form id="form" class="form">
+          <input
+            type="text"
+            placeholder="Enter the country to search"
+            name=""
+            id="userInput"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

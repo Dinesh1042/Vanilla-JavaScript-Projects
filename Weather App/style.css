@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Overpass", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: aliceblue;
+}
+body .container {
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 600px;
+  overflow: hidden;
+}
+body .container .topContainer {
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  background-color: #eaeaea;
+  width: 100%;
+  padding: 2rem;
+}
+body .container .topContainer .countryName h1 {
+  color: #3c5568;
+  font-size: 1.7rem;
+}
+body .container .topContainer .logo {
+  width: 100px;
+  height: 100px;
+}
+body .container .topContainer .logo img {
+  width: 100%;
+  object-fit: cover;
+}
+body .container .weatherInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+  align-content: space-between;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+body .container .weatherInfo div h1 {
+  font-size: 1.3rem;
+  color: #3c5568;
+}
+body .container .weatherInfo div p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+body .container .weatherInfo div:not(:last-child) {
+  border-right: 1px solid #3c556860;
+}
+body .container .weatherInfo div {
+  text-align: center;
+}
+body .container .searchCont {
+  width: 100%;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+body .container .searchCont form {
+  display: grid;
+  grid-template-columns: auto 25%;
+}
+body .container .searchCont form input,
+body .container .searchCont form button {
+  border: none;
+  outline: none;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  font-family: inherit;
+  font-size: 1rem;
+}
+body .container .searchCont form input {
+  border: 1px solid #3c5568;
+  border-radius: 0.35rem 0 0 0.35rem;
+}
+body .container .searchCont form button {
+  background-color: #369;
+  color: #fff;
+  border-radius: 0 0.35rem 0.35rem 0;
+}
+
+@media (max-width: 550px) {
+  body .container .weatherInfo {
+    grid-template-columns: 1fr;
+  }
+  body .container .weatherInfo div:not(:last-child) {
+    border: none;
+    border-bottom: 1px solid #3c556860;
+  }
+  body .container .weatherInfo div {
+    padding: 1rem;
+  }
+  body .container .weatherInfo {
+    padding: 0rem 2rem;
+    margin-top: 0;
+  }
+  body .container .searchCont {
+    margin-top: 0;
+  }
+}
