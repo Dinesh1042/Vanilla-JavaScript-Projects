@@ -14,11 +14,12 @@ This repository contains only vanilla JavaScript Projects
  | 9 | [Random People Wealth](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Random%20People%20Wealth) |
  | 10 | [Analog Clock](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Analog%20Clock) |
  | 11 | [Calculator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Calculator) |
- | 12 | [Expense Tracker](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Expense%20Tracker)
+ | 12 | [Expense Tracker](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Expense%20Tracker)|
  | 13 | [Quiz App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Quiz%20App) |
  | 14 | [Todo App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Todo%20App)|
  | 15 | [User Feedback](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/User%20Feedback)|
- | 16 | [Weather App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Weather%20App)
+ | 16 | [Weather App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Weather%20App) |
+ 
  Report if there is any bug🐛 in these projects
 
  > ### Thanks for Visiting 😊
