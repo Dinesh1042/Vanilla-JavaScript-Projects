@@ -6,11 +6,11 @@ const formEl = document.getElementById("form");
 
 const iconEl = document.getElementById("icon");
 
-// (function getGoeLocation() {
-//   if (navigator.geolocation)
-//     navigator.geolocation.getCurrentPosition(getUserCityName);
-//   else alert("Geo location is not supported in your browser");
-// })();
+(function getGoeLocation() {
+  if (navigator.geolocation)
+    navigator.geolocation.getCurrentPosition(getUserCityName);
+  else alert("Geo location is not supported in your browser");
+})();
 
 async function getUserCityName(position) {
   const { latitude, longitude } = position.coords;
