@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <section id="section">
+      <div class="headerCont">
+        <header>
+          <div class="headerLeft">
+            <h1>Notes Dev</h1>
+          </div>
+          <div class="headerRight">
+            <div class="searchCont">
+              <div class="icon">
+                <ion-icon name="search"></ion-icon>
+              </div>
+              <input type="text" placeholder="Search" id="userSearch" />
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="yourWorkCont">
+        <div class="yourWork">
+          <div class="yourWorkpara">
+            <h3>Your Work</h3>
+          </div>
+          <div class="ctaBtn">
+            <button id="addNote">
+              Add Note <ion-icon name="add"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <main class="notesMain">
+        <div class="notes" id="notes"></div>
+      </main>
+    </section>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </body>
+</html>

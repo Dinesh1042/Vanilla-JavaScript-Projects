@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;400;600;700;800&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: content-box;
+}
+
+body section {
+  font-family: "Overpass", sans-serif;
+}
+
+body section .headerCont {
+  width: 100%;
+  max-width: 950px;
+  margin: 0% auto;
+}
+
+body section .headerCont header {
+  display: grid;
+  padding: 1.2rem;
+}
+
+body section .headerCont header .headerLeft h1 {
+  color: #586f7c;
+  font-size: 32px;
+}
+
+body section .headerCont header .headerRight {
+  margin-top: 1rem;
+}
+
+body section .headerCont header .headerRight .searchCont {
+  background-color: #e7e7e7;
+  display: flex;
+  align-items: center;
+  border-radius: 0.35rem;
+  flex: 1;
+}
+
+body section .headerCont header .headerRight .searchCont input {
+  border: none;
+  outline: none;
+  padding: 0.6rem 0.75rem;
+  background-color: transparent;
+  line-height: 1.5;
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%;
+  vertical-align: bottom;
+  padding-inline-start: 5px;
+}
+
+body section .headerCont header .headerRight .searchCont .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+  margin-right: 5px;
+}
+
+body section .headerCont header .headerRight .searchCont .icon ion-icon {
+  color: #949494;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 840px) {
+  body section .headerCont header {
+    grid-template-columns: repeat(2, 1fr);
+    align-self: center;
+    align-content: center;
+  }
+  body section .headerCont header .headerRight {
+    margin-top: 0%;
+  }
+}
+
+body section .yourWorkCont {
+  width: 100%;
+  max-width: 950px;
+  margin: 0% auto;
+}
+
+body section .yourWorkCont .yourWork {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0% auto;
+  padding: 0.5rem;
+}
+
+body section .yourWorkCont .yourWork .yourWorkpara h3 {
+  color: #777777;
+}
+
+body section .yourWorkCont .yourWork .ctaBtn button {
+  padding: 0.475rem 1rem;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  background: #0066ff;
+  color: #fff;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+body section .yourWorkCont .yourWork .ctaBtn button ion-icon {
+  margin-left: 5px;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 840px) {
+  body section .yourWorkCont {
+    margin-top: 1rem;
+  }
+}
+
+body section .notesMain {
+  width: 100%;
+  max-width: 950px;
+  margin: 0% auto;
+}
+
+body section .notesMain .notes {
+  padding: 1rem 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-gap: 1rem;
+}
+
+body section .notesMain .notes .note {
+  display: flex;
+  flex-direction: column;
+  max-width: 470px;
+  background: #4eaf9c;
+  padding: 1.3rem;
+  border-radius: 0.35rem;
+}
+
+body section .notesMain .notes .note header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #00000021;
+  padding-bottom: 0.5rem;
+}
+
+body section .notesMain .notes .note header .title h1 {
+  font-size: 1.3rem;
+}
+
+body section .notesMain .notes .note header .starCont {
+  cursor: pointer;
+  padding: 0rem 0.2rem;
+}
+
+body section .notesMain .notes .note header .starCont ion-icon {
+  font-size: 1.2rem;
+  color: #ff9529;
+  cursor: pointer;
+}
+
+body section .notesMain .notes .note .textareaNote {
+  margin-top: 1rem;
+  max-height: 160px;
+  overflow: hidden;
+  min-height: 100px;
+  vertical-align: top;
+}
+
+body section .notesMain .notes .note .textareaNote p {
+  line-height: 1.5;
+}
+
+body section .notesMain .notes .note .textareaNote p span {
+  background-color: #0066ff;
+  color: #fff;
+}
+
+body section .notesMain .notes .note .dateAndEditBtn {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+body section .notesMain .notes .note .dateAndEditBtn .date {
+  font-size: 14px;
+  color: #424242;
+}
+
+body section .notesMain .notes .note .dateAndEditBtn .ctaBtns {
+  display: flex;
+}
+
+body section .notesMain .notes .note .dateAndEditBtn .ctaBtns button {
+  border: none;
+  outline: none;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+body section .notesMain .notes .note .dateAndEditBtn .ctaBtns .edit {
+  background-color: #424242;
+  margin-right: 10px;
+}
+
+body section .notesMain .notes .note .dateAndEditBtn .ctaBtns .delete {
+  background-color: #dc3545;
+}
+
+body section .addNote {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  width: 100%;
+  background-color: #e6e6e6;
+}
+
+body section .addNote main {
+  max-width: 900px;
+  margin: 0% auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body section .addNote main .noteTitleCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body section .addNote main .noteTitleCont form input {
+  padding: 0.475rem 0.75rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-color: #d8d8d8;
+  width: fit-content;
+  border-radius: 0.35rem;
+}
+
+body section .addNote main .noteTitleCont form h1 {
+  user-select: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+body section .addNote main .noteTitleCont button {
+  padding: 0.475rem 1rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 0.35rem;
+  cursor: pointer;
+}
+
+body section .addNote main .noteTitleCont button#save {
+  background: #0066ff;
+  margin-right: 10px;
+}
+
+body section .addNote main .noteTitleCont button#close {
+  background: #dc3545;
+}
+
+@media (max-width: 475px) {
+  body section .addNote main .noteTitleCont {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  body section .addNote main .noteTitleCont form {
+    margin-bottom: 1rem;
+  }
+}
+
+body section .addNote main .userNote {
+  border-radius: 0.45rem;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 1.5rem;
+  background-color: #d8d8d8;
+  padding: 1rem;
+  max-height: 80%;
+}
+
+body section .addNote main .userNote textarea {
+  height: 100%;
+  width: 100%;
+  resize: none;
+  outline: none;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+body.notePad__active {
+  overflow: hidden;
+}
+/*# sourceMappingURL=style.css.map */
