@@ -8,8 +8,59 @@ let isEditingMode = false;
 let LOCALSTORAGE_NOTES_KEY = `Notes App`;
 let previousBackground = null;
 
+// LocalStorage
+
+class LocalStorage {
+  constructor(localStorageKey) {
+    this.localStorageKey = localStorageKey;
+    this.local = localStorage.getItem(this.localStorageKey)
+      ? JSON.parse(localStorage.getItem(this.localStorageKey))
+      : [];
+  }
+
+  save(newNote) {
+    this.local.push(newNote);
+    this.stringifyLocal();
+  }
+
+  delete(id) {
+    this.local = this.local.filter((item) => item.id !== id);
+    this.stringifyLocal();
+  }
+
+  update(id, title, text) {
+    this.local = this.local.map((item) => {
+      if (item.id === id) {
+        item.title = title;
+        item.text = text;
+      }
+      return item;
+    });
+    this.stringifyLocal();
+  }
+
+  updateIsStared(id, value) {
+    this.local = this.local.map((item) => {
+      if (item.id === id) {
+        item.isStared = value;
+      }
+      return item;
+    });
+    this.stringifyLocal();
+  }
+
+  stringifyLocal() {
+    return localStorage.setItem(
+      this.localStorageKey,
+      JSON.stringify(this.local)
+    );
+  }
+}
+
+const noteLocal = new LocalStorage("Notes App");
+
 addNoteEl.addEventListener("click", (e) => {
-  let noteCount = getLocal().length ? getLocal().length : ``;
+  let noteCount = noteLocal.local.length ? noteLocal.local.length : ``;
   getNotePad(`New note ${noteCount}`, null);
   bodyEl.classList.add("notePad__active");
 });
@@ -51,7 +102,7 @@ function createNoteDOM(data) {
     data.isStared
       ? noteEl.classList.add("stared")
       : noteEl.classList.remove("stared");
-    updateLocalIsStared(data.id, data.isStared);
+    noteLocal.updateIsStared(data.id, data.isStared);
   });
 
   // Text area cont
@@ -97,7 +148,7 @@ function createNoteDOM(data) {
 
   delBtn.addEventListener("click", (e) => {
     noteEl.remove();
-    deleteLocal(data.id);
+    noteLocal.delete(data.id);
   });
 }
 
@@ -199,14 +250,14 @@ function setNotesDOM(title, note, currentEditEl) {
       isStared: false,
     };
     createNoteDOM(newNote);
-    setLocal(newNote);
+    noteLocal.save(newNote);
   } else if (isEditingMode) {
     const id = currentEditEl.dataset.noteid;
     const titleEl = currentEditEl.querySelector("header .title h1");
     const noteEl = currentEditEl.querySelector(".textareaNote p");
     titleEl.innerHTML = title;
     noteEl.innerHTML = note;
-    updateLocalNotes(id, title, note);
+    noteLocal.update(id, title, note);
     isEditingMode = false;
   }
 }
@@ -235,59 +286,6 @@ function getCurrentDate() {
   const todayDate = date.getDate();
   const year = date.getFullYear();
   return `${month}, ${todayDate} ${year}`;
-}
-
-// LOCAL STORAGE
-
-function getLocal() {
-  return localStorage.getItem(LOCALSTORAGE_NOTES_KEY)
-    ? JSON.parse(localStorage.getItem(LOCALSTORAGE_NOTES_KEY))
-    : [];
-}
-
-function setLocal(newNote) {
-  let local = getLocal();
-  local.push(newNote);
-  return localStorage.setItem(LOCALSTORAGE_NOTES_KEY, JSON.stringify(local));
-}
-
-(function SetNoteDate() {
-  let local = getLocal();
-  if (local.length) {
-    local.forEach((note) => {
-      createNoteDOM(note);
-      previousBackground = local[local.length - 1].backgroundColor;
-    });
-  }
-})();
-
-function updateLocalNotes(id, title, note) {
-  let local = getLocal();
-  local = local.map((item) => {
-    if (item.id === id) {
-      item.title = title;
-      item.text = note;
-    }
-    return item;
-  });
-  return localStorage.setItem(LOCALSTORAGE_NOTES_KEY, JSON.stringify(local));
-}
-
-function deleteLocal(id) {
-  let local = getLocal();
-  local = local.filter((item) => item.id !== id);
-  return localStorage.setItem(LOCALSTORAGE_NOTES_KEY, JSON.stringify(local));
-}
-
-function updateLocalIsStared(id, value) {
-  let local = getLocal();
-  local = local.map((item) => {
-    if (item.id === id) {
-      item.isStared = value;
-    }
-    return item;
-  });
-  return localStorage.setItem(LOCALSTORAGE_NOTES_KEY, JSON.stringify(local));
 }
 
 function getRandomBackground() {
@@ -319,7 +317,6 @@ function searchNote(e) {
   notes.forEach((note) => {
     let noteTitle = note.querySelector("header .title h1");
     let notePara = note.querySelector(".textareaNote p");
-    let notePara2 = notePara.innerText;
     let regex = new RegExp(value, "gi");
     note.style.display = `none`;
     if (notePara.innerText.match(regex) || noteTitle.innerText.match(regex)) {
@@ -327,3 +324,13 @@ function searchNote(e) {
     }
   });
 }
+
+(function () {
+  let local = noteLocal.local;
+  if (local.length) {
+    local.forEach((item) => {
+      createNoteDOM(item);
+    });
+    previousBackground = local[local.length - 1].backgroundColor;
+  }
+})();

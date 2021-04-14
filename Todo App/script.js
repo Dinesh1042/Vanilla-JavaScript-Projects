@@ -10,15 +10,65 @@ const totalTaskEl = document.getElementById("totalTask");
 const CompletedTaskEl = document.getElementById("CompletedTask");
 const inCompletedTaskEl = document.getElementById("inCompletedTask");
 const userNameEl = document.getElementById("userName");
+const statUserNameEl = document.getElementById("statUserName");
 
 let isEditMode = false;
 let editEl = null;
 let TODO_LOCALSTORAGE_KEY = `Todo`;
 let userName = getUserName();
-
 userNameEl.innerHTML = userName;
 
 formEl.addEventListener("submit", addTodo);
+
+class LocalStorage {
+  constructor(localStorageKey) {
+    this.localStorageKey = localStorageKey;
+    this.local = localStorage.getItem(this.localStorageKey)
+      ? JSON.parse(localStorage.getItem(this.localStorageKey))
+      : [];
+  }
+
+  save(newData) {
+    this.local.push(newData);
+    this.stringifyLocal();
+  }
+
+  delete(id) {
+    this.local = this.local.filter((item) => item.id !== id);
+    this.stringifyLocal();
+  }
+
+  update(id, task, description) {
+    this.local = this.local.map((item) => {
+      if (item.id === id) {
+        item.task = task;
+        item.description = description;
+      }
+      return item;
+    });
+    this.stringifyLocal();
+  }
+
+  updateIsCompleted(id, value) {
+    this.local = this.local.map((item) => {
+      if (item.id === id) {
+        item.isCompleted = value;
+      }
+      return item;
+    });
+
+    this.stringifyLocal();
+  }
+
+  stringifyLocal() {
+    return localStorage.setItem(
+      this.localStorageKey,
+      JSON.stringify(this.local)
+    );
+  }
+}
+
+let todoLocal = new LocalStorage(TODO_LOCALSTORAGE_KEY);
 
 function addTodo(e) {
   e.preventDefault();
@@ -55,7 +105,7 @@ function createNewTodo(inputEl) {
     description: description,
   };
   createTodoEl(todoData);
-  addTodoToLocal(todoData);
+  todoLocal.save(todoData);
   inputEl.value = null;
 }
 
@@ -147,7 +197,7 @@ function createTodoEl(todo) {
 
   delBtn.addEventListener("click", (e) => {
     liEl.remove();
-    deleteLocal(liEl.dataset.id);
+    todoLocal.delete(liEl.dataset.id);
   });
 
   // Checkbox Event
@@ -167,7 +217,7 @@ function createTodoEl(todo) {
       checkEl.innerHTML = `<span class="material-icons"> done </span>`;
       isCompValue = true;
     }
-    updateIsCompletedLocal(liEl.dataset.id, isCompValue);
+    todoLocal.updateIsCompleted(liEl.dataset.id, isCompValue);
   });
 }
 
@@ -231,7 +281,7 @@ function editMyTodo(inputEl) {
   isEditMode = false;
   editEl = null;
   AddTodoBtnEl.innerHTML = `Add Todo`;
-  editLocalTodo(id, task, description);
+  todoLocal.update(id, task, description);
 }
 
 function updateEditView(liEl) {
@@ -250,53 +300,6 @@ function updateEditView(liEl) {
 function getTodoId() {
   return Math.floor(Math.random() * 10000000).toString(16);
 }
-
-function getLocal() {
-  return localStorage.getItem(TODO_LOCALSTORAGE_KEY)
-    ? JSON.parse(localStorage.getItem(TODO_LOCALSTORAGE_KEY))
-    : [];
-}
-
-function addTodoToLocal(newTodo) {
-  let local = getLocal();
-  local.push(newTodo);
-  return localStorage.setItem(TODO_LOCALSTORAGE_KEY, JSON.stringify(local));
-}
-
-function editLocalTodo(id, task, description) {
-  let local = getLocal();
-  local = local.map((item) => {
-    if (item.id === id) {
-      item.task = task;
-      item.description = description;
-    }
-    return item;
-  });
-  return localStorage.setItem(TODO_LOCALSTORAGE_KEY, JSON.stringify(local));
-}
-
-function deleteLocal(id) {
-  let local = getLocal();
-  local = local.filter((item) => item.id !== id);
-  return localStorage.setItem(TODO_LOCALSTORAGE_KEY, JSON.stringify(local));
-}
-
-function updateIsCompletedLocal(id, value) {
-  let local = getLocal();
-  local = local.map((item) => {
-    if (item.id === id) item.isCompleted = value;
-    return item;
-  });
-  return localStorage.setItem(TODO_LOCALSTORAGE_KEY, JSON.stringify(local));
-}
-
-(function upadateTodoList() {
-  listsEl.innerHTML = null;
-  let local = getLocal();
-  if (local.length) {
-    return local.forEach((todo) => createTodoEl(todo));
-  }
-})();
 
 // Button Ripple Effect
 
@@ -368,12 +371,13 @@ window.addEventListener("click", (e) => {
 });
 
 function showStats() {
-  let local = getLocal();
+  let local = todoLocal.local;
   let totalTaskLength = local.length;
   const completedTaskLength = local.filter((item) => item.isCompleted).length;
   const inCompletedTaskLength = totalTaskLength - completedTaskLength;
   const percentage =
-    Math.floor((completedTaskLength / totalTaskLength) * 100).toString() === `NaN`
+    Math.floor((completedTaskLength / totalTaskLength) * 100).toString() ===
+    `NaN`
       ? 0
       : Math.floor((completedTaskLength / totalTaskLength) * 100);
 
@@ -436,6 +440,7 @@ function NameModalInput() {
     if (inputEl.value.trim()) {
       userName = inputEl.value;
       userNameEl.innerHTML = userName;
+      statUserNameEl.innerHTML = userName;
       localStorage.setItem("userName", userName);
     }
     modalCont.remove();
@@ -458,7 +463,10 @@ function getUserName() {
 
 (function setUserName() {
   let user = localStorage.getItem("userName");
-  if (!user) {
-    return NameModalInput();
-  }
+  if (!user) return NameModalInput();
+})();
+
+(function () {
+  let local = todoLocal.local;
+  if (local.length) local.forEach((item) => createTodoEl(item));
 })();
