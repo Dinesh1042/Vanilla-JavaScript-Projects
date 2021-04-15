@@ -4,7 +4,8 @@ const curouselContEl = document.getElementById("curouselCont");
 
 class Curousel {
   constructor(element, action) {
-    this.element = element;
+   this.element =
+      element instanceof Element ? element : document.querySelector(element);
     this.index = 0;
     this.isSliding = false;
     this.slideInterval = null;
