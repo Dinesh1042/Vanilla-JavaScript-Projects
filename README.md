@@ -25,6 +25,6 @@ This repository contains only vanilla JavaScript Projects
  
  Report if there is any bug🐛 in these projects
 
- > ### Thanks for Visiting 😊
+ > ### Thanks for Visiting 😍
  
  
