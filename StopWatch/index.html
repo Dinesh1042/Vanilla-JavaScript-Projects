@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="stopwatch" id="stopwatch">
+        <header>
+          <img src="./asset/timer_black_24dp.svg"  alt="" />
+          <h1>Stopwatch</h1>
+        </header>
+        <div class="timer" id="timer">
+          <h1 id="minute" class="minute">00</h1>
+          <div class="colon"></div>
+          <h1 id="second" class="second">00</h1>
+          <div class="colon"></div>
+          <h1 class="millisecond">00</h1>
+        </div>
+        <div class="ctaBtns" id="ctaBtns">
+          <button class="startBtn" id="start" data-value="start ">Start</button>
+          <button class="reset" id="reset" data-value="stop ">Reset</button>
+          <button id="lap" class="lapBtn" data-value="lap ">Lap</button>
+        </div>
+        <div class="lapsCont">
+          <header>
+            <p>Laps</p>
+          </header>
+          <div class="laps" id="laps"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

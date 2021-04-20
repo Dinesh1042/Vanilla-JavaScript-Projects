@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;600;700;800&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+body {
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body section {
+  width: 90%;
+  max-width: 500px;
+  margin-top: 1.5rem;
+}
+body section header {
+  display: flex;
+  align-items: center;
+}
+body section header h1 {
+  font-size: 2rem;
+  margin-left: 5px;
+  margin-top: 6px;
+  color: #a14f4f;
+  position: relative;
+}
+
+body section header img {
+  width: 35px;
+}
+body section .timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+body section .timer h1 {
+  font-size: 5rem;
+  font-weight: bolder;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(48, 48, 48);
+}
+body section .timer .colon {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(48, 48, 48);
+  position: relative;
+  margin: 0 5px;
+  border-radius: 4px;
+}
+body section .timer .colon:nth-child(2):after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgb(48, 48, 48);
+  position: absolute;
+  border-radius: 4px;
+  top: -20px;
+}
+body section .ctaBtns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1.5rem;
+}
+body section .ctaBtns button {
+  padding: 0.475rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #0d6efd;
+  color: #fff;
+  width: fit-content;
+  border-radius: 0.25rem;
+  margin: 0% auto;
+}
+body section .ctaBtns .reset {
+  background: #b02a37;
+}
+body section .ctaBtns .lapBtn {
+  background: #61428f;
+}
+body section .lapsCont {
+  margin-top: 2rem;
+}
+body section .lapsCont header {
+  margin: 1rem 0;
+}
+body section .laps {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+body section .laps .lap {
+  background-color: #61428f;
+  padding: 1rem;
+  margin: 5px 0;
+  border-radius: 0.25rem;
+}
+body section .laps .lap p {
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  body section .timer h1 {
+    font-size: 4rem;
+  }
+}
