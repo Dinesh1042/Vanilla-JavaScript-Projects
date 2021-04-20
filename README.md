@@ -23,6 +23,7 @@ This repository contains only vanilla JavaScript Projects
  | 18 | [Notes App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Notes%20App) |
  | 19 | [Drag And Drop](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Drag%20And%20Drop)  |
  | 20 | [Stopwatch](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/StopWatch) |
+ | 21 | [Search Github Profile](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Search%20Github%20User) |
  
  Report if there is any bug🐛 in these projects
 
