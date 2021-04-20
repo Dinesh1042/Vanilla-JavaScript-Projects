@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800&display=swap");
+
+$jungleGreen: #2ba59d;
+$lightGray: #f1f3f4;
+$textColor: #5f6368;
+$borderColor: #dadce0;
+
+@mixin mobile {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+body {
+  background-color: #fff;
+}
+body section {
+  width: 90%;
+  margin: 0% auto;
+  max-width: 600px;
+}
+// header
+body section {
+  header {
+    padding: 1.5rem 0.5rem;
+    h1 {
+      color: $jungleGreen;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+// Form
+
+body section form {
+  width: 100%;
+  input {
+    padding: 0.475rem 1rem;
+    border: none;
+    outline: none;
+    background: $lightGray;
+    width: 100%;
+    border-radius: 0.35rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+// User
+
+body section .searchResultCont {
+  margin-top: 2rem;
+}
+body section .searchResultCont .githubCont {
+  padding: 2rem;
+  background: $lightGray;
+  border-radius: 0.45rem;
+  .githubUserCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .userTop {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      @include mobile() {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0.5rem;
+        .textCont {
+          margin-left: 0 !important;
+          margin-top: 1.5rem;
+        }
+      }
+      .imgCont {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        img {
+          height: 100px;
+          width: 100px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          border: 5px solid $jungleGreen;
+          height: calc(100% + 5px);
+          width: calc(100% + 5px);
+          border-radius: 50%;
+          top: calc(0% - 7.5px);
+          left: calc(0% - 7.5px);
+          border-left-color: transparent;
+          transform: rotate(45deg);
+        }
+      }
+      // Text Area
+      .textCont {
+        margin-left: 2rem;
+        .username {
+          a {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: $jungleGreen;
+            text-decoration: none;
+            text-transform: capitalize;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .bio {
+          margin-top: 5px;
+          width: 100%;
+          p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: $textColor;
+            word-break: normal;
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
+    // Repos
+    .repos_follow {
+      background-color: #dadce0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem 2rem;
+      border-radius: 0.4rem;
+      margin-top: 2rem;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .title {
+          color: $textColor;
+        }
+        p:not(.title) {
+          color: #111;
+          margin-top: 4px;
+        }
+      }
+      @include mobile() {
+        padding: 1rem;
+        margin-top: 1.5rem;
+        flex-direction: column;
+        div:not(:first-child) {
+          margin-top: 1rem;
+        }
+      }
+    }
+    // Tags
+    .repoLists {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      justify-content: flex-start;
+      margin-top: 1rem;
+      gap: 1rem;
+      a {
+        text-decoration: none;
+        color: #fff;
+        background: $jungleGreen;
+        padding: 0.575rem 1rem;
+        text-align: center;
+        border-radius: 0.35rem;
+      }
+    }
+  }
+}
