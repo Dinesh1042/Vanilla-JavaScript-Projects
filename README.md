@@ -22,6 +22,7 @@ This repository contains only vanilla JavaScript Projects
  | 17 | [Share Modal](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Share%20Modal) |
  | 18 | [Notes App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Notes%20App) |
  | 19 | [Drag And Drop](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Drag%20And%20Drop)  |
+ | 20 | [Stopwatch](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/StopWatch) |
  
  Report if there is any bug🐛 in these projects
 
