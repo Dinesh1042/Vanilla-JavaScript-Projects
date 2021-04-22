@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload File</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <header>
+          <h1>Upload your files</h1>
+          <p>File should be Image, Video</p>
+        </header>
+        <div class="dropArea" id="dropArea">
+          <div class="contentHolder">
+            <img src="./asset/upload.svg" draggable="false" alt="upload-icon" />
+            <p id="dropText">Drag & Drop your files</p>
+            <span>Or</span>
+            <input type="file" multiple id="uploadInput" />
+            <button id="browseBtn">Browse File</button>
+          </div>
+        </div>
+        <div class="uploadedFileCont" id="uploadedFileCont"></div>
+        <div class="uploadBtnCont" id="uploadBtnCont">
+          <button class="uploadBtn">Upload</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

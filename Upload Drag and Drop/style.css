@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;1,700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+body section {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #f0f8ff;
+  padding-top: 2rem;
+}
+body section .container {
+  padding: 2.5rem;
+  padding-top: 0rem;
+  padding-bottom: 1.5rem;
+  border-radius: 0.8rem;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 500px;
+}
+body section .container header {
+  padding: 2.2rem;
+  text-align: center;
+}
+body section .container header h1 {
+  color: #3c4043;
+  font-size: 1.8rem;
+  color: #6099f0;
+}
+body section .container header p {
+  color: #858a92;
+  font-size: 1rem;
+}
+body section .container .dropArea {
+  border: 2px dashed #c2d9f9;
+  border-radius: 0.5rem;
+  width: 100%;
+  position: relative;
+  transition: 0.3s ease;
+  transition-property: background-color, border;
+  user-select: none;
+}
+body section .container .dropArea .contentHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  color: #858a92;
+}
+body section .container .dropArea .contentHolder img {
+  width: 80px;
+}
+body section .container .dropArea .contentHolder p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+body section .container .dropArea .contentHolder span {
+  font-size: 1rem;
+  color: #a0a5ad;
+}
+body section .container .dropArea .contentHolder button {
+  border: none;
+  outline: none;
+  background-color: #468bf5;
+  color: #fff;
+  padding: 0.45rem 1.2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+body section .container .dropArea .contentHolder input {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0%;
+}
+body section .container .dropArea.content-over {
+  border: 2px solid #c2d9f9;
+  background-color: #c2d9f952;
+}
+body section .container .uploadedFileCont {
+  width: 100%;
+  margin-top: 1rem;
+}
+body section .container .uploadedFileCont .uploadedFile {
+  display: grid;
+  grid-template-columns: auto 5%;
+  align-items: center;
+  gap: 2px;
+  padding: 0.5rem 1rem;
+  background-color: rgba(82, 179, 171, 0.1);
+  border-radius: 0.4rem;
+  user-select: none;
+  margin: 10px 0;
+}
+body section .container .uploadedFileCont .uploadedFile .fileName p {
+  color: #468bf5;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+body section .container .uploadedFileCont .uploadedFile .fileName span {
+  font-size: 12px;
+  color: #858a92;
+  margin-left: 5px;
+}
+body section .container .uploadedFileCont .uploadedFile .closeBtn {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body section .container .uploadedFileCont .uploadedFile .closeBtn ion-icon {
+  color: #dc3545;
+  font-size: 20px;
+}
+body section .container .uploadBtnCont {
+  width: 100%;
+  margin-top: 10px;
+  display: none;
+}
+body section .container .uploadBtn {
+  border: none;
+  outline: none;
+  background-color: #468bf5;
+  color: #fff;
+  padding: 0.45rem 1.2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5;
+  float: right;
+  text-align: right;
+}
+body section .container .uploadBtnCont.content-here {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 450px) {
+  body section .container header h1 {
+    font-size: 1.4rem;
+  }
+  body section .container header p {
+    font-size: 1rem;
+  }
+}
