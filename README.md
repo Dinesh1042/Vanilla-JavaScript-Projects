@@ -24,6 +24,7 @@ This repository contains only vanilla JavaScript Projects
  | 19 | [Drag And Drop](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Drag%20And%20Drop)  |
  | 20 | [Stopwatch](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/StopWatch) |
  | 21 | [Search Github Profile](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Search%20Github%20User) |
+ | 22 | [Upload - Drag and Drop](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Upload%20Drag%20and%20Drop) |
  
  Report if there is any bug🐛 in these projects
 
