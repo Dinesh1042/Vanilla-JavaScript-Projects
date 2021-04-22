@@ -30,7 +30,8 @@ function browseFile() {
 }
 
 function uploadFile() {
-  let file = this.files;
+  let file = [...this.files];
+  file.forEach((fl) => (fl.fileId = getRandomFileId()));
   dropFile(file);
 }
 
