@@ -25,7 +25,8 @@ This repository contains only vanilla JavaScript Projects
  | 20 | [Stopwatch](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/StopWatch) |
  | 21 | [Search Github Profile](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Search%20Github%20User) |
  | 22 | [Upload - Drag and Drop](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Upload%20Drag%20and%20Drop) |
- | 23 | [Search Autocomplete](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Search%20Autocomplete)
+ | 23 | [Search Autocomplete](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Search%20Autocomplete) |
+ | 24 | [Image Comparison Slider](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Image%20Comparison%20Slider) |
  
  Report if there is any bug🐛 in these projects
 
