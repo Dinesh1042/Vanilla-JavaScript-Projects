@@ -1,0 +1,163 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+body section header {
+  width: 90%;
+  max-width: 700px;
+  margin: 0% auto;
+  margin-bottom: 1rem;
+}
+
+body section header h1 {
+  color: #77ba99;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+body section .wrapper {
+  height: 450px;
+  width: 90%;
+  max-width: 90%;
+  overflow: hidden;
+  position: relative;
+  border: 7px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin: 0% auto;
+}
+
+body section .wrapper .imageContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+body section .wrapper .imageContainer > div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+body section .wrapper .imageContainer > div img {
+  height: 100%;
+  user-select: none;
+  object-fit: cover;
+}
+
+body section .wrapper .imageContainer .image2Cont {
+  width: 50%;
+  overflow: hidden;
+}
+
+body section .wrapper .sliderCont {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+}
+
+body section .wrapper .sliderCont input {
+  height: 100%;
+  width: 100%;
+  appearance: none;
+  background-color: transparent;
+  z-index: 1000;
+  opacity: 0;
+}
+
+body section .wrapper .sliderCont input::-webkit-slider-thumb {
+  appearance: none;
+  height: 500px;
+  width: 3px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+body section .wrapper .sliderCont input::-moz-range-thumb {
+  appearance: none;
+}
+
+body section .wrapper .sliderCont .holderRange {
+  height: 450px;
+  width: 3px;
+  left: 50%;
+  position: absolute;
+  pointer-events: none;
+}
+
+body section .wrapper .sliderCont .holderRange::after {
+  content: "";
+  position: absolute;
+  height: 45%;
+  width: 100%;
+  background-color: #fff;
+  top: 0%;
+}
+
+body section .wrapper .sliderCont .holderRange::before {
+  content: "";
+  position: absolute;
+  height: 45%;
+  width: 100%;
+  background-color: #fff;
+  bottom: 0%;
+  cursor: col-resize;
+}
+
+body section .wrapper .sliderCont .holderRange span {
+  height: 47px;
+  width: 47px;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: url(./asset/Switch.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer !important;
+}
+
+body section .ctaBtns {
+  width: 90%;
+  max-width: 500px;
+  margin: 0% auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+body section .ctaBtns input {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+body section .ctaBtns button {
+  padding: 0.475rem 1rem;
+  border: none;
+  outline: none;
+  background-color: #77ba99;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

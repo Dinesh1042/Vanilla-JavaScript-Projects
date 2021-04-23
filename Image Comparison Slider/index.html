@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Comparasion Slider</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1>Image Comparasion Slider</h1>
+      </header>
+      <div class="wrapper" id="wrapper">
+        <div class="imageContainer">
+          <!-- Image 1 -->
+          <div class="image1Cont">
+            <img
+              id="image1"
+              src="./asset/img-1.jpg"
+              draggable="false"
+              alt="image-1"
+            />
+          </div>
+          <!-- Image 2 -->
+          <div class="image2Cont" id="image2Cont">
+            <img
+              id="image2"
+              src="./asset/img-2.jpg"
+              draggable="false"
+              alt="image-2"
+            />
+          </div>
+        </div>
+        <!-- Slider -->
+        <div class="sliderCont">
+          <div class="holderRange" id="holderRange">
+            <span></span>
+          </div>
+          <input
+            type="range"
+            name="imageSlider"
+            min="0"
+            max="100"
+            value="50"
+            id="imageSlider"
+            class="imageSlider"
+          />
+        </div>
+      </div>
+      <div class="ctaBtns">
+        <input type="file" id="imageInput" />
+        <button id="image1Btn" class="image1Btn">Select Image 1</button>
+
+        <!-- Image 2 -->
+
+        <button id="image2Btn" class="image2Btn">Select Image 2</button>
+      </div>
+    </section>
+  </body>
+</html>
