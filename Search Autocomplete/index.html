@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script defer src="./script.js"></script>
+  <body>
+    <section id="section" class="section">
+      <header class="header">
+        <h1>Search bar Autocomplete</h1>
+      </header>
+      <div class="searchBar">
+        <form autocomplete="off" id="form" class="form">
+          <span class="material-icons"> search </span>
+          <input
+            placeholder="Search Or type a URL"
+            type="text"
+            name="userText"
+            id="inputText"
+            class="inputText"
+          />
+        </form>
+      </div>
+      <div class="suggestionCont">
+        <ul id="suggestionList"></ul>
+      </div>
+    </section>
+  </body>
+</html>
