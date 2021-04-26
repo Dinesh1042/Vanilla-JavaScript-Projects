@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="GalleryAppSection">
+      <header>
+        <div class="title">
+          <h1>Gallery App</h1>
+        </div>
+        <form class="form" id="form">
+          <div class="icon">
+            <ion-icon name="search"></ion-icon>
+          </div>
+          <input
+            type="text"
+            placeholder="Search"
+            name="query"
+            id="searchText"
+            class="searchText"
+          />
+        </form>
+      </header>
+      <div class="imageContainer" id="imageContainer">
+        <div class="image">
+          <img src="./Images/Image4.jpg" alt="" />
+          <div class="author">
+            <p>JavaScript</p>
+            <span>
+              <ion-icon name="heart"></ion-icon>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="loadMoreBtn">
+        <button id="loadMore" class="loadMore">Load more</button>
+      </div>
+    </section>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </body>
+</html>
