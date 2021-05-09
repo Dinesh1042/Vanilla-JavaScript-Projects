@@ -29,6 +29,8 @@ This repository contains only vanilla JavaScript Projects
  | 24 | [Image Comparison Slider](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Image%20Comparison%20Slider) |
  | 25 | [Gallery App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Gallery%20App)  |
  | 26 | [Scroll Spy](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Scroll%20Spy)   |
+ | 27 | [Follow Along Nav](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Follow%20Along%20Nav)  |
+ 
  
  Report if there is any bug🐛 in these projects
 
