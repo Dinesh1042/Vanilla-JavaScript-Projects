@@ -1,0 +1,184 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: #f4f4f4;
+  font-family: "Overpass", sans-serif;
+}
+
+ul,
+p {
+  margin: 0%;
+  padding: 0%;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+header {
+  position: relative;
+}
+
+header h1 {
+  margin: 0%;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+header h1 span {
+  color: #56cbf9;
+}
+
+header {
+  background: #d8e4ff;
+}
+
+.headerwrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0% auto;
+}
+
+.headerwrapper ul li {
+  position: relative;
+}
+
+.headerwrapper > button {
+  padding: 0.7em;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #8093f1;
+  border-radius: 0.25rem;
+}
+
+.drop_down {
+  position: absolute;
+  z-index: 1;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 100%;
+}
+
+.headerwrapper nav ul {
+  display: flex;
+  list-style: none;
+}
+.headerwrapper nav ul li {
+  display: flex;
+  justify-content: center;
+}
+
+.headerwrapper nav ul li a {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 0.7rem;
+}
+
+.headerwrapper nav ul li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+/* Drop down  */
+
+.drop_down {
+  display: none;
+  opacity: 0;
+  transition: 250ms ease opacity;
+}
+
+.headerwrapper nav ul li.active .drop_down {
+  display: unset;
+}
+
+.headerwrapper nav ul li.active.show .drop_down {
+  opacity: 1;
+}
+
+.drop_down .drop_down_wrapper {
+  min-width: 350px;
+  padding: 2rem;
+}
+
+.drop_down.dd1 .drop_down_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  width: 450px;
+  gap: 0.3rem;
+}
+
+.drop_down.dd1 .drop_down_wrapper > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.drop_down.dd1 .drop_down_wrapper > div p {
+  margin-left: 0.5rem;
+}
+
+.drop_down.dd3 .drop_down_wrapper button {
+  margin-top: 1rem;
+  padding: 0.7em;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #8093f1;
+  border-radius: 0.25rem;
+}
+
+/* Follow Along */
+
+.headerwrapper .followAlong {
+  position: absolute;
+  transform-origin: 50% 0;
+  height: 100px;
+  width: 100px;
+  background: #fff;
+  filter: drop-shadow(0px 2px 8px rgba(99, 99, 99, 0.2));
+  border-radius: 0.25rem;
+  transition: 250ms ease;
+  top: 15%;
+  left: 0%;
+  opacity: 0;
+  visibility: hidden;
+}
+.headerwrapper .followAlong.active {
+  opacity: 1;
+  visibility: visible;
+}
+.headerwrapper .followAlong::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  left: 50%;
+  transform: translate(-50%, -10px) rotate(45deg);
+  border-radius: 0.25rem;
+}
+
+main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  margin: 0% auto;
+}
