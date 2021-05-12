@@ -30,6 +30,7 @@ This repository contains only vanilla JavaScript Projects
  | 25 | [Gallery App](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Gallery%20App)  |
  | 26 | [Scroll Spy](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Scroll%20Spy)   |
  | 27 | [Follow Along Nav](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Follow%20Along%20Nav)  |
+ | 28 | [Password Generator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Password%20Generator) |
  
  
  Report if there is any bug🐛 in these projects
