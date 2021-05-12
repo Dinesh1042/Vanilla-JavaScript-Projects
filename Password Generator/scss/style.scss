@@ -1,0 +1,175 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Overpass", sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: aliceblue;
+}
+
+body .container {
+  background: #fff;
+  border-radius: 0.35rem;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 28rem;
+  padding-top: 1.5rem;
+  header {
+    h1 {
+      font-size: 1.3rem;
+      margin-top: 0%;
+      color: #2d3142;
+      @media (max-width: 500px) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .generatedPasswordView {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2d3142;
+    background: #d3d3d3;
+    border-radius: 0.25rem;
+    padding-left: 1rem;
+    button {
+      padding: 0.8rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 0.25rem;
+      background-color: #4f5d75;
+      color: #bfc0c0;
+      position: relative;
+      i {
+        transition: 200ms ease;
+      }
+      &::before {
+        display: none;
+        content: attr(data-tooltip);
+        position: absolute;
+        background-color: #4f5d75;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        top: -93%;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      &:hover {
+        i {
+          transform: scale(1.1);
+        }
+
+        &::before {
+          display: flex;
+        }
+      }
+      &:active {
+        i {
+          transform: scale(0.93);
+        }
+      }
+    }
+  }
+}
+
+// Main
+
+body .container {
+  main {
+    margin-top: 2rem;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    > div:not(.sliderWrapper) {
+      input {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+      }
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .toggle {
+        height: 1.2rem;
+        width: 2.5rem;
+        background-color: #ccc;
+        border-radius: 9rem;
+        cursor: pointer;
+        transition: 300ms ease;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 0.9rem;
+          width: 0.9rem;
+          border-radius: 9rem;
+          background-color: #fff;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 8%;
+          transition: 300ms ease;
+        }
+      }
+      input:checked + .toggle::after {
+        left: 56%;
+        background-color: #fff;
+      }
+      input:checked + .toggle {
+        background-color: #2196f3;
+      }
+
+      label {
+        cursor: pointer;
+        user-select: none;
+        font-size: 1rem;
+      }
+    }
+    .sliderWrapper {
+      width: 100%;
+      .topWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      input {
+        width: 100%;
+        appearance: none;
+        height: 0.3rem;
+        background: #d3d3d3;
+        border-radius: 1rem;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: 300ms ease;
+        margin-top: 0.5rem;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  > button {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: #2196f3;
+    color: #fff;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: 300ms ease opacity;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}

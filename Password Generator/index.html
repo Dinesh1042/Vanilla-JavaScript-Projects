@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Random Password Generator</h1>
+      </header>
+      <div class="generatedPasswordView">
+        <span id="passwordView"> Cl!cKt0gener@te </span>
+        <button data-tooltip="Copy" id="copybtn" class="copy">
+          <i class="fas fa-clipboard fa-lg"></i>
+        </button>
+      </div>
+      <main>
+        <div class="sliderWrapper">
+          <div class="topWrapper">
+            <label for="slider">Password Length</label>
+            <span id="passwordLength">12</span>
+          </div>
+          <input
+            type="range"
+            name="passwordRange"
+            id="slider"
+            min="4"
+            max="18"
+            value="14"
+          />
+        </div>
+        <div class="upperCaseWrapper">
+          <label for="upper">Uppercase</label
+          ><input checked type="checkbox" name="upper" id="upper" />
+          <label for="upper" class="toggle"></label>
+        </div>
+        <div class="lowerCaseWrapper">
+          <label for="lower">LowerCase</label
+          ><input checked type="checkbox" name="lower" id="lower" />
+          <label for="lower" class="toggle"></label>
+        </div>
+        <div class="symbolWrapper">
+          <label for="symbol">Symbol</label
+          ><input checked type="checkbox" name="symbol" id="symbol" />
+          <label for="symbol" class="toggle"></label>
+        </div>
+      </main>
+      <button id="generatePassword">Generate Password</button>
+    </div>
+  </body>
+</html>

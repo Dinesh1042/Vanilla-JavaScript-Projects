@@ -1,0 +1,225 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Overpass", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: aliceblue;
+}
+
+body .container {
+  background: #fff;
+  border-radius: 0.35rem;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 28rem;
+  padding-top: 1.5rem;
+}
+
+body .container header h1 {
+  font-size: 1.3rem;
+  margin-top: 0%;
+  color: #2d3142;
+}
+
+@media (max-width: 500px) {
+  body .container header h1 {
+    font-size: 1.1rem;
+  }
+}
+
+body .container .generatedPasswordView {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #2d3142;
+  background: #d3d3d3;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+}
+
+body .container .generatedPasswordView button {
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: #4f5d75;
+  color: #bfc0c0;
+  position: relative;
+}
+
+body .container .generatedPasswordView button i {
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+body .container .generatedPasswordView button::before {
+  display: none;
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: #4f5d75;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  top: -93%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+body .container .generatedPasswordView button:hover i {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .container .generatedPasswordView button:hover::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .container .generatedPasswordView button:active i {
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+}
+
+body .container main {
+  margin-top: 2rem;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+}
+
+body .container main > div:not(.sliderWrapper) {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container main > div:not(.sliderWrapper) input {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+body .container main > div:not(.sliderWrapper) .toggle {
+  height: 1.2rem;
+  width: 2.5rem;
+  background-color: #ccc;
+  border-radius: 9rem;
+  cursor: pointer;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  position: relative;
+}
+
+body .container main > div:not(.sliderWrapper) .toggle::after {
+  content: "";
+  position: absolute;
+  height: 0.9rem;
+  width: 0.9rem;
+  border-radius: 9rem;
+  background-color: #fff;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 8%;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+body .container main > div:not(.sliderWrapper) input:checked + .toggle::after {
+  left: 56%;
+  background-color: #fff;
+}
+
+body .container main > div:not(.sliderWrapper) input:checked + .toggle {
+  background-color: #2196f3;
+}
+
+body .container main > div:not(.sliderWrapper) label {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 1rem;
+}
+
+body .container main .sliderWrapper {
+  width: 100%;
+}
+
+body .container main .sliderWrapper .topWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container main .sliderWrapper input {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 0.3rem;
+  background: #d3d3d3;
+  border-radius: 1rem;
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  margin-top: 0.5rem;
+}
+
+body .container main .sliderWrapper input:hover {
+  opacity: 1;
+}
+
+body .container > button {
+  width: 100%;
+  padding: 0.8em;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  -webkit-transition: 300ms ease opacity;
+  transition: 300ms ease opacity;
+}
+
+body .container > button:hover {
+  opacity: 0.75;
+}
+/*# sourceMappingURL=style.css.map */
