@@ -1,3 +1,3 @@
 # Markdown Maker
 
-### ![Markdown Maker](./screenshot/mdmaker.png)
+### ![Markdown Maker](./screenshot/markdown_maker.png)
