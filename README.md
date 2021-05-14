@@ -31,7 +31,7 @@ This repository contains only vanilla JavaScript Projects
  | 26 | [Scroll Spy](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Scroll%20Spy)   |
  | 27 | [Follow Along Nav](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Follow%20Along%20Nav)  |
  | 28 | [Password Generator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Password%20Generator) |
- 
+ | 29 | [Markdown Maker](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Markdown%20Maker)   |
  
  Report if there is any bug🐛 in these projects
 
