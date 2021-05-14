@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown Maker</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <script defer src="./script/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Markdown Maker</h1>
+      </header>
+
+      <form class="form" id="form">
+        <div class="floating-form">
+          <textarea
+            name=""
+            id="userFeedback"
+            cols="30"
+            rows="10"
+            class="userFeedback"
+            placeholder=" "
+          ></textarea>
+          <label for="userFeedback">Write your Markdown!</label>
+        </div>
+        <button type="submit">Make Markdown</button>
+      </form>
+      <div class="textContent">
+        <ul class="list" id="lists"></ul>
+      </div>
+    </div>
+  </body>
+</html>

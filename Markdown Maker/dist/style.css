@@ -1,0 +1,307 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #f6f6f6;
+}
+
+body .container header h1 {
+  color: #212529;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+}
+
+.container .form {
+  background-color: #e9ecef;
+  opacity: 1;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0% auto;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  position: relative;
+}
+
+.container .form textarea {
+  margin: 0;
+  font-family: inherit;
+  resize: vertical;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  min-height: calc(1.5em + 0.75rem + 2px);
+  padding: 1rem 0.75rem;
+  height: 180px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  outline: none;
+}
+
+.container .form label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 2rem 2rem;
+  pointer-events: none;
+  border: 1px solid transparent;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: opacity 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+  opacity: 0.75;
+}
+
+.container .form textarea:focus ~ label,
+.container .form textarea:not(:placeholder-shown) ~ label {
+  opacity: 0.65;
+  -webkit-transform: scale(0.85) translateY(-0.2rem) translateX(0.15rem);
+          transform: scale(0.85) translateY(-0.2rem) translateX(0.15rem);
+}
+
+.container .form textarea:focus,
+.container .form textarea:not(:placeholder-shown) {
+  padding-top: 1.85rem;
+  padding-bottom: 0.625rem;
+}
+
+.container .form button {
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  margin-top: 1rem !important;
+  cursor: pointer;
+}
+
+.container .form button:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+body .container .textContent {
+  margin-bottom: 3rem;
+}
+
+body .container .textContent ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  list-style: none;
+}
+
+body .container .textContent ul li {
+  color: #212529;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+body .container .textContent ul li code {
+  background-color: #dbe5e6;
+  font-family: monospace;
+  font-size: 90%;
+  padding: 0.15rem 0.5rem;
+  color: #1c2022;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+}
+
+body .container .textContent ul li p {
+  margin: 0%;
+}
+
+body .container .textContent ul li:first-child {
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+}
+
+body .container .textContent ul li:last-child {
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+body .container .textContent ul li .content img {
+  width: 70%;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+body .container .textContent ul li.editing {
+  background: #e9ecef;
+}
+
+body .container .textContent ul li.editing::after {
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
+}
+
+body .container .textContent ul li::after {
+  position: absolute;
+  content: "This list is on editing";
+  color: #cacaca;
+  background-color: #56595c;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 0.9rem;
+  -webkit-transition: 400ms ease;
+  transition: 400ms ease;
+  -webkit-clip-path: circle(0% at 50% 50%);
+          clip-path: circle(0% at 50% 50%);
+}
+
+body .container .textContent ul .editWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .container .textContent ul .editWrapper button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 0.75;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+body .container .textContent ul .editWrapper button:hover {
+  background-color: #21252936;
+}
+
+body .container .textContent ul .editWrapper button:hover::after {
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
+}
+
+body .container .textContent ul .editWrapper button::after {
+  position: absolute;
+  content: "Edit";
+  color: #cacaca;
+  background-color: #212529;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.25rem;
+  top: -50%;
+  font-size: 0.9rem;
+  -webkit-clip-path: circle(0% at 50% 50%);
+          clip-path: circle(0% at 50% 50%);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+body .container .textContent ul .editWrapper img {
+  width: 1.2rem;
+  pointer-events: none;
+}
+
+@-webkit-keyframes editModeAnimation {
+  from {
+    top: -30%;
+  }
+}
+
+@keyframes editModeAnimation {
+  from {
+    top: -30%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
