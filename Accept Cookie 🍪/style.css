@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  outline-color: rgb(128, 49, 7);
+}
+
+:root {
+  --Orange: hsla(21, 55%, 40%, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Overpass", sans-serif;
+  background: #f0f0f0;
+}
+
+.cookieContainer {
+  width: 20rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 0.45rem;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  padding-top: 2rem;
+  display: none;
+  opacity: 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.cookieContainer img {
+  background: #fff;
+  width: 50%;
+}
+
+.cookieContainer h1 {
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: var(--Orange);
+  margin: 0.3rem;
+}
+
+.cookieContainer p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: hsla(0, 0%, 35%, 1);
+  margin-top: 0.5rem;
+}
+
+.cookieContainer .cta-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookieContainer .cta-btn button {
+  border: none;
+  padding: 0.8rem;
+  color: #fff;
+  background-color: var(--Orange);
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 300ms ease opacity;
+}
+
+.cookieContainer .cta-btn button:hover {
+  opacity: 0.75;
+}
+
+.cookieContainer .cta-btn a {
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: var(--Orange);
+  cursor: pointer;
+  transition: 300ms opacity;
+}
+
+.cookieContainer .cta-btn a:hover {
+  opacity: 0.75;
+}
+
+.cookieContainer.accept-cookie {
+  display: unset;
+  opacity: 1;
+}
