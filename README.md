@@ -32,6 +32,8 @@ This repository contains only vanilla JavaScript Projects
  | 27 | [Follow Along Nav](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Follow%20Along%20Nav)  |
  | 28 | [Password Generator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Password%20Generator) |
  | 29 | [Markdown Maker](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Markdown%20Maker)   |
+ | 30 | [Accept Cookie🍪](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Accept%20Cookie%20%F0%9F%8D%AA)  |
+ 
  
  Report if there is any bug🐛 in these projects
 
