@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+body #board {
+  height: 100vmin;
+  width: 100vmin;
+  background-color: rgb(207, 207, 207);
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+}
+
+.snake {
+  background-color: #369;
+  border: 0.25vmin solid rgb(1, 41, 82);
+}
+
+.food {
+  background-color: rgb(252, 143, 0);
+  border: 0.25vmin solid yellow;
+}
