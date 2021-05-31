@@ -34,6 +34,7 @@ This repository contains only vanilla JavaScript Projects
  | 29 | [Markdown Maker](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Markdown%20Maker)   |
  | 30 | [Accept Cookie🍪](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Accept%20Cookie%20%F0%9F%8D%AA)  |
  | 31 | [Snake Game](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Snake%20Game)            |
+ | 32 | [Binary Calculator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Binary%20Calculator)    |
  
  
  Report if there is any bug🐛 in these projects
