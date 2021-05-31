@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binary Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Binary Calculator</h1>
+    </header>
+    <div class="calculator__container" id="calculator">
+      <div class="display">
+        <p class="history"></p>
+        <h2 class="current">0</h2>
+        <span class="shortSpan"> </span>
+      </div>
+      <div class="btns">
+        <button class="btn operand" id="btn0">0</button>
+        <button class="btn operand" id="btn1">1</button>
+        <button class="btn clear" id="clear">C</button>
+        <button class="btn operator" id="btnSum">+</button>
+        <button class="btn operator" id="btnSub">-</button>
+        <button class="btn operator" id="btnMul">*</button>
+        <button class="btn operator" id="btnDiv">/</button>
+        <button class="btn equal" id="equalTo">=</button>
+      </div>
+    </div>
+  </body>
+</html>
