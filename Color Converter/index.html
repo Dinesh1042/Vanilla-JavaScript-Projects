@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Converter</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="col1">
+        <header>
+          <h1>Color Converter</h1>
+        </header>
+        <div class="form-group">
+          <div class="form-control">
+            <label for="colorName">Enter Your color RGB, HEX, HSL</label>
+            <input
+              value="rgba(13, 109, 253, 0.918)"
+              type="text"
+              class="userColorInput"
+              id="userColorInput"
+            />
+          </div>
+
+          <div class="card card1">
+            <div class="card-body">
+              <span>#0d6dfdea</span>
+              <button data-tooltip="Copy">
+                <img
+                  src="./asset/clipboard-solid.svg"
+                  alt="Click to copy color code"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="card card2">
+            <div class="card-body">
+              <span>hsla(216, 98, 52, 0.918)</span>
+              <button data-tooltip="Copy">
+                <img
+                  src="./asset/clipboard-solid.svg"
+                  alt="Click to copy color code"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-btn">
+          <button>Convert</button>
+        </div>
+      </div>
+      <div class="col2">
+        <input type="color" id="colorInput" class="colorBackground" />
+      </div>
+    </div>
+  </body>
+</html>
