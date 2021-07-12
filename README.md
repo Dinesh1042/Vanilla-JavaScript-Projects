@@ -36,6 +36,7 @@ This repository contains only vanilla JavaScript Projects
  | 31 | [Snake Game](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Snake%20Game)            |
  | 32 | [Binary Calculator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Binary%20Calculator)    |
  | 33 | [Color Converter](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Color%20Converter)     |
+ | 34 | [Form Validation](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Form%20Validation)    |
  
  
  Report if there is any bug🐛 in these projects
