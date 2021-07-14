@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <title>Form Validation</title>
+    <script defer src="./dist/script/script.js"></script>
+  </head>
+  <body>
+    <form class="form" id="form" novalidate>
+      <h1>Sign Up</h1>
+
+      <div class="form-group-wrapper">
+        <!-- Full name -->
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input
+            class="form-control"
+            type="text"
+            id="fullName"
+            required
+            minlength="3"
+            name="fullName"
+          />
+
+          <div class="invalid-feedback">Fullname is required</div>
+        </div>
+        <!-- Username -->
+        <div class="form-group">
+          <label for="userName">User Name</label>
+          <input
+            class="form-control"
+            type="text"
+            id="userName"
+            name="username"
+            minlength="3"
+            required
+          />
+          <div class="invalid-feedback">Username is required</div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          class="form-control"
+          type="email"
+          required
+          id="email"
+          name="email"
+        />
+        <div class="invalid-feedback">Email is required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          class="form-control"
+          type="password"
+          id="password"
+          placeholder="6+ characters"
+          name="password"
+          minlength="6"
+          required
+        />
+        <div class="invalid-feedback">Password is required</div>
+      </div>
+
+      <div class="form-check-group">
+        <input
+          class="form-control"
+          type="checkbox"
+          id="termsCheckbox"
+          name="isTermsAccpected"
+          required
+        />
+        <p class="terms">
+          Creating an account means you're okay with our
+          <a href="#">Terms of Service Privacy Policy</a> and our default
+          <a href="#">Notification Settings</a>
+        </p>
+        <div class="invalid-feedback">
+          You must agree to the <strong>Terms of Service Policy</strong>
+        </div>
+      </div>
+      <div class="cta-btn">
+        <button class="btn btn-accent" id="submitBtn">Create Account</button>
+      </div>
+    </form>
+  </body>
+</html>
