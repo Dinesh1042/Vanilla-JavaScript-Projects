@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <title>Todo App via Liked-list</title>
+    <script defer src="./dist/script/script.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <h1>Todo App</h1>
+      <form id="form" autocomplete="off">
+        <div class="form-group">
+          <input
+            type="text"
+            id="todoInput"
+            class="form-control"
+            placeholder="Enter your Todo"
+          />
+          <button class="btn btn-primary" id="addBtn">Add Todo</button>
+        </div>
+      </form>
+      <div class="todo-list-wrapper">
+        <ul class="todo-list-group" id="listGroup"></ul>
+      </div>
+    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
+</html>
