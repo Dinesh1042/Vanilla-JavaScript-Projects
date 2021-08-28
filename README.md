@@ -37,6 +37,7 @@ This repository contains only vanilla JavaScript Projects
  | 32 | [Binary Calculator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Binary%20Calculator)    |
  | 33 | [Color Converter](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Color%20Converter)     |
  | 34 | [Todo App via linked-list](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Todo%20App%20via%20Linked-list) |
+ | 35 | [Minesweeper](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Minesweeper)  |
  
  
  Report if there is any bug🐛 in these projects
