@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer type="module" src="./scripts/script.js"></script>
+    <title>SOS</title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="/" class="brand d-none">
+        <h1>SOS</h1>
+      </a>
+      <header class="header d-none">
+        <div id="players" class="players">
+          <div class="player-1">
+            <h6 id="player1Name">PLAYER 1</h6>
+            <span id="player1Score">0</span>
+          </div>
+          <div class="player-2">
+            <h6 id="player2Name">PLAYER 2</h6>
+            <span id="player2Score">0</span>
+          </div>
+        </div>
+        <div class="current-player">
+          <h6>CURRENT PLAYER</h6>
+          <h4 id="currentPlayerName">PLAYER 1</h4>
+        </div>
+      </header>
+      <div class="board"></div>
+
+      <div class="game-modal">
+        <div class="modal">
+          <div class="modal-header">
+            <h3 class="modal-title">Create new game</h3>
+          </div>
+          <div class="modal-body">
+            <form class="form" id="form">
+              <div class="form-group">
+                <label for="player1Name" class="form-label"
+                  >Player 1 Name</label
+                >
+                <input
+                  class="form-control"
+                  type="text"
+                  maxlength="10"
+                  id="player1Name"
+                  placeholder="Player 1"
+                />
+              </div>
+              <div class="form-group">
+                <label for="player2Name" class="form-label"
+                  >Player 2 Name</label
+                >
+                <input
+                  class="form-control"
+                  type="text"
+                  maxlength="10"
+                  id="player2Name"
+                  placeholder="Player 2"
+                />
+              </div>
+              <div class="form-group">
+                <label for="boardSize" class="form-label">Board Size</label>
+                <input
+                  class="form-control"
+                  type="number"
+                  min="3"
+                  max="20"
+                  id="boardSize"
+                  placeholder="7"
+                />
+              </div>
+              <div class="cta-btn">
+                <button type="submit" class="btn btn-primary">Create</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="winner-modal">
+        <div class="modal">
+          <header class="modal-header">
+            <h2 id="winnerName">DINESH</h2>
+            <h6 id="wonText">WON THE GAME</h6>
+          </header>
+          <div class="modal-body">
+            <div class="players">
+              <div class="player1-score">
+                <h6 id="player1Name">YOUR SCORE</h6>
+                <span id="winnerScore">0</span>
+              </div>
+              <div class="player2-score">
+                <h6 id="player2Name">OPPONENT SCORE</h6>
+                <span id="opponentScore">0</span>
+              </div>
+            </div>
+            <div class="btn btn-success">Restart</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-backdrop"></div>
+    </div>
+  </body>
+</html>
