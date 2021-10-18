@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Captcha</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-head">
+          <h2>Enter the captcha to continue</h2>
+        </div>
+        <div class="card-body">
+          <div class="captcha-box">
+            <div class="captcha-text" id="captchaText">SomeRandomText</div>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the captcha"
+              id="captchaInput"
+              maxlength="6"
+            />
+            <label>Enter the Captcha</label>
+          </div>
+        </div>
+        <div class="card-foot">
+          <button disabled id="captchaBtn" class="btn btn-primary">
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
