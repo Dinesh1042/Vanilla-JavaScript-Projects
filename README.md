@@ -40,6 +40,7 @@ This repository contains only vanilla JavaScript Projects
  | 35 | [Minesweeper](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Minesweeper)  |
  | 36 | [Tic Tac Toe](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Tic%20Tac%20Toe) |
  | 37 | [Sos Game](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Sos%20Game)  |
+ | 38 | [Captcha](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Captcha) |
  
  
  Report if there is any bug🐛 in these projects
