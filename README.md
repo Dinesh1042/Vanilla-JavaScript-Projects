@@ -41,6 +41,7 @@ This repository contains only vanilla JavaScript Projects
  | 36 | [Tic Tac Toe](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Tic%20Tac%20Toe) |
  | 37 | [Sos Game](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Sos%20Game)  |
  | 38 | [Captcha](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Captcha) |
+ | 39 | [Date Calculator](https://github.com/Dinesh1042/Vanilla-JavaScript-Projects/tree/main/Date%20Calculator) |
  
  
  Report if there is any bug🐛 in these projects
