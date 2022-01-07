@@ -1,0 +1,141 @@
+:root {
+  --primary: #85b7d9;
+  --danger: #842029;
+  --softRed: #f5c2c7;
+  --lightRed: #f8d7da;
+
+  --white: #fff;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --black: #000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: var(--gray-900);
+}
+
+.container {
+  max-width: 47rem;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+header h1 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  border: 1px solid var(--gray-400);
+  outline: 0;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  transition: 200ms ease border-color;
+}
+
+.form-control[type='date'] {
+  cursor: pointer;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+}
+
+.form-control::-webkit-calendar-picker-indicator {
+  filter: invert(95%) sepia(6%) saturate(228%) hue-rotate(169deg)
+    brightness(90%) contrast(89%);
+  transition: 200ms ease filter;
+  cursor: pointer;
+}
+
+.form-control:focus::-webkit-calendar-picker-indicator {
+  filter: invert(77%) sepia(12%) saturate(1235%) hue-rotate(168deg)
+    brightness(92%) contrast(84%);
+}
+
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-danger {
+  color: var(--danger);
+  background-color: var(--lightRed);
+  border-color: var(--softRed);
+}
+
+.date-result {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.date-result h3 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.date-result p {
+  margin: 0;
+}
+
+.date-result .unit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .input-wrap {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .form-group {
+    flex: 1;
+  }
+}
+
+/* Utils */
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--gray-600);
+}
+
+.mt-2 {
+  margin-top: 0.6rem !important;
+}
