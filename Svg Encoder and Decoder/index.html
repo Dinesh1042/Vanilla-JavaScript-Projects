@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svg to Data-uri</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script defer type="module" src="./src/script.js"></script>
+  </head>
+  <body>
+    <section class="section-hero">
+      <header class="header">
+        <h1>Svg Encoder and Decoder</h1>
+      </header>
+      <div class="error" id="error">
+        A Error Occurred, Something went wrong!
+      </div>
+      <div class="container">
+        <div class="form-floating">
+          <textarea
+            id="svgFormControl"
+            class="form-control"
+            placeholder="<svg>...</svg>"
+          ></textarea>
+          <label for="svgFormControl" class="form-label">Enter Svg</label>
+          <button class="btn btn-primary btn-copy btn-sm">Copy</button>
+        </div>
+        <div class="form-floating">
+          <textarea
+            id="dataURIFormControl"
+            class="form-control"
+            placeholder="data:image/svg+xml"
+          ></textarea>
+          <label for="dataURIFormControl" class="form-label">Encoded Svg</label>
+          <button class="btn btn-primary btn-copy btn-sm">Copy</button>
+        </div>
+        <div class="form-floating">
+          <textarea
+            id="cssBackgroundFormControl"
+            class="form-control"
+            placeholder="background-image: url(...);"
+          ></textarea>
+          <label for="cssBackgroundFormControl" class="form-label"
+            >Css Background</label
+          >
+          <button class="btn btn-primary btn-copy btn-sm">Copy</button>
+        </div>
+        <div id="svgPreviewContainer" class="svg-preview-container">
+          <div id="svgPreview" class="svg-preview"></div>
+          <div class="form-label svg-preview-label">Preview</div>
+          <input
+            type="color"
+            class="color-picker form-control shadow-none"
+            id="colorPicker"
+            value="#ffffff"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
